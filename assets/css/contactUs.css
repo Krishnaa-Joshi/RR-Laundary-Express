@@ -1,0 +1,73 @@
+/* ================= CONTACT PAGE ================= */
+
+.hero-contact {
+  min-height: 70vh;
+}
+
+/* Why section cards */
+.contact-why {
+  padding: 120px 0;
+  background: #f8fafc;
+}
+
+.contact-card {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 20px;
+  height: 100%;
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.15);
+}
+
+.contact-card h5 {
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #0f172a;
+}
+
+/* Contact form */
+.contact-form-section {
+  padding: 120px 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  font-size: 15px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #22c55e;
+}
+
+/* Contact info box */
+.contact-info-box {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 22px;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.1);
+}
+
+.contact-info-box h4 {
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.contact-info-box ul {
+  margin-top: 20px;
+}
+
+.contact-info-box li {
+  margin-bottom: 12px;
+  font-size: 15px;
+}

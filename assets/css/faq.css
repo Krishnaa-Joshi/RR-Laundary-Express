@@ -1,0 +1,16 @@
+/* FAQ Accordion polish */
+.accordion-button {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.accordion-button:not(.collapsed) {
+  background: rgba(34, 197, 94, 0.08);
+  color: #0f172a;
+}
+
+.accordion-body {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #475569;
+}
