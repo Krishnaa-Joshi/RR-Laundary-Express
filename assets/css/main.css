@@ -80,7 +80,7 @@ section p {
   background: linear-gradient(90deg, #0b2545, #0f2f5f);
   color: #ffffff;
   font-size: 14px;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 /* Left container */
@@ -153,12 +153,12 @@ section p {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(15, 23, 42, 0.08);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 .navbar-logo {
-  height: 45px;
-  width: 250px;
+  height: 40px;
+  width: 300px;
 }
 
 .nav-link {
@@ -221,10 +221,69 @@ section p {
   box-shadow: 0 12px 30px rgba(30, 58, 138, 0.35);
 }
 
-
 @media (max-width: 768px) {
   .navbar-logo {
     height: 32px;
+    width: 150px;
+  }
+}
+
+/* ===============================
+   MOBILE TOP BAR (HAMBURGER)
+================================ */
+
+.mobile-top-bar {
+  display: none;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.1);
+  margin-bottom: 10px;
+}
+
+.mobile-top-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0f172a;
+  padding: 8px 0;
+}
+
+.mobile-top-item i {
+  color: #2563eb;
+  font-size: 14px;
+}
+
+.mobile-top-link {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ===============================
+   RESPONSIVE SWITCH
+================================ */
+
+/* Desktop */
+@media (min-width: 992px) {
+  .mobile-top-bar {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+  .top-bar {
+    display: none;
+  }
+
+  .mobile-top-bar {
+    display: block;
+  }
+
+  .navbar-nav .nav-link {
+    margin-left: 0;
+    padding: 10px 0;
   }
 }
 
@@ -232,9 +291,8 @@ section p {
 /* ================= HERO ================= */
 .hero {
   position: relative;
-  min-height: 90vh;
+  min-height: 50vh;
   padding: 160px 0 120px;
-  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 45%, #22c55e 120%);
   overflow: hidden;
 }
 
@@ -300,35 +358,40 @@ section p {
   box-shadow: 0 12px 30px rgba(34, 197, 94, 0.35);
 }
 
-/* Image */
-.hero-img {
-  max-width: 100%;
-  border-radius: 26px;
-  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.35);
-  transition:
-  opacity 0.8s ease,
-  transform 0.8s ease;
+.hero-bg {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-/* Buttons */
-.hero-enhanced .btn-outline-light {
-  border-color: rgba(255, 255, 255, 0.4);
-  color: #ffffff;
+.home-hero-bg{
+  background-image: url("../img/hero/5ef6194fd7bb2257438518a9e352ee77.jpg");
 }
 
-.hero-enhanced .btn-outline-light:hover {
-  background: #ffffff;
-  color: #0f172a;
+.about-hero-bg{
+  background-image: url("../img/hero/5d5803da11f4a78717ab76c4236ea047.jpg");
 }
 
-/* button */
-.btn-outline-secondary {
-  transition: all 0.3s ease;
+.service-hero-bg{
+  background-image: url("../img/hero/63f54924fc7ef34ed0b4462c04e3a768.jpg");
 }
 
-.btn-outline-secondary:hover {
-  background: #1e3a8a;
-  color: #fff;
+.faq-hero-bg{
+  background-image: url("../img/hero/faq.jpg");
+}
+
+.contact-hero-bg{
+  background-image: url("../img/hero/customer-support.jpg");
+}
+
+/* Content above overlay */
+.hero-bg .container {
+  position: relative;
+  z-index: 2;
 }
 
 /* ================= STATS ================= */
@@ -340,12 +403,6 @@ section p {
 .stats h2 {
   font-size: 40px;
   font-weight: 800;
-  color: #1e3a8a;
-  transition: transform 0.3s ease;
-}
-
-.stats h2:hover {
-  transform: scale(1.08);
 }
 
 .stats p {
@@ -494,7 +551,6 @@ section p {
   transform: scale(1.08);
 }
 
-
 .services {
   padding: 120px 0;
   background:
@@ -525,7 +581,7 @@ section p {
   box-shadow: 0 30px 80px rgba(15, 23, 42, 0.15);
 }
 
-.service-card::before {
+/* .service-card::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -539,7 +595,7 @@ section p {
   );
   opacity: 0;
   transition: opacity 0.4s ease;
-}
+} */
 
 .service-card:hover::before {
   opacity: 1;
@@ -1114,4 +1170,300 @@ section p {
   font-size: 22px;
   font-weight: 600;
   color: #e5e7eb;
+}
+
+/* ===============================
+   ABOUT HERO 
+================================ */
+
+/* Eyebrow */
+.about-eyebrow {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #22c55e;
+}
+
+/* Heading */
+.about-hero-content h1 {
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.about-hero-content h1 span {
+  color: #22c55e;
+}
+
+/* Lead paragraph */
+.about-lead {
+  font-size: 20px;
+  font-weight: 500;
+  color: #c7d2fe;
+  margin-bottom: 22px;
+  max-width: 680px;
+}
+
+/* Normal paragraphs */
+.about-hero-content p {
+  font-size: 16.5px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+  max-width: 720px;
+}
+
+/* Mission highlight */
+.about-mission {
+  padding-left: 16px;
+  border-left: 3px solid #22c55e;
+  color: #f1f5f9;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .about-hero-bg {
+    min-height: auto;
+    padding: 120px 0 80px;
+  }
+
+  .about-hero-content h1 {
+    font-size: 36px;
+  }
+
+  .about-lead {
+    font-size: 17px;
+  }
+
+  .about-hero-content p {
+    font-size: 15.5px;
+  }
+}
+
+/* FLOATING MISSION CARD */
+.mission-card {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  padding: 28px 26px;
+  max-width: 360px;
+  color: #e5e7eb;
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.45),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+
+  position: relative;
+}
+
+/* Mission label */
+.mission-label {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #22c55e;
+}
+
+/* Mission text */
+.mission-card p {
+  font-size: 15.5px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  color: #f1f5f9;
+}
+
+/* Bullet points */
+.mission-points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mission-points li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 10px;
+  font-size: 14.5px;
+  color: #cbd5f5;
+}
+
+.mission-points li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #22c55e;
+  font-weight: 700;
+}
+
+/* Slight floating feel */
+@media (min-width: 992px) {
+  .mission-card {
+    transform: translateY(20px);
+  }
+}
+
+@media (max-width: 991px) {
+  .mission-card {
+    max-width: 100%;
+    margin-top: 20px;
+    transform: none;
+  }
+}
+
+
+/* ===============================
+   LOGIN PAGE BASE
+================================ */
+
+.login-page {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("../img/hero/hero-img-7.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Dark overlay */
+.login-overlay {
+  position: absolute;
+  inset: 0;
+   background: rgba(15, 23, 42, 0.75);
+  z-index: 1;
+}
+
+/* ===============================
+   LOGIN CARD
+================================ */
+
+.login-card {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px 36px;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.35);
+}
+
+/* Header */
+.login-header img {
+  height: 48px;
+  margin-bottom: 16px;
+}
+
+.login-header h2 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.login-header p {
+  font-size: 14.5px;
+  color: #475569;
+  margin-bottom: 28px;
+}
+
+/* ===============================
+   FORM
+================================ */
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.input-group-text {
+  background: #f1f5f9;
+  border: none;
+  color: #2563eb;
+}
+
+.form-control {
+  border: none;
+  background: #f1f5f9;
+  padding: 12px 14px;
+  font-size: 14px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border: 1px solid #2563eb;
+  background: #ffffff;
+}
+
+/* ===============================
+   LINKS & BUTTONS
+================================ */
+
+.forgot-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+.btn-primary {
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  border: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(30, 58, 138, 0.4);
+}
+
+/* ===============================
+   FOOTER
+================================ */
+
+.login-footer {
+  margin-top: 28px;
+}
+
+.login-footer p {
+  font-size: 12.5px;
+  color: #64748b;
+}
+
+.login-footer span {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 576px) {
+  .login-card {
+    padding: 32px 24px;
+  }
+
+  .login-header h2 {
+    font-size: 22px;
+  }
 }
