@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Laundry Express | Healthcare Laundry Solutions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/img/logos/RRLOGO.png" />
+
+    <!-- Bootstrap CSS (CDN) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="../assets/css/aos.css" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <!-- <link rel="stylesheet" href="../assets/css/order.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      /* ================= ORDERS HERO ================= */
+
+.orders-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  padding: 28px 32px;
+  border-radius: 22px;
+  color: #ffffff;
+}
+
+.orders-hero h3 {
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.orders-hero p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.orders-summary {
+  display: flex;
+  gap: 24px;
+}
+
+.orders-summary span {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.orders-summary strong {
+  display: block;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+/* ================= FILTERS ================= */
+
+.orders-filters {
+  display: flex;
+  gap: 14px;
+}
+
+.filter-item {
+  position: relative;
+}
+
+.filter-item i {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  color: #64748b;
+}
+
+.filter-item .form-select,
+.filter-item .form-control {
+  padding-left: 42px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+}
+
+/* ================= TABLE ================= */
+
+.orders-table {
+  border-collapse: separate;
+  border-spacing: 0 16px;
+}
+
+.orders-table tbody tr {
+  background: linear-gradient(135deg, #ffffff, #f8fafc);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+  border-radius: 18px;
+}
+
+.orders-table tbody tr:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 28px 60px rgba(15, 23, 42, 0.14);
+}
+
+/* ================= STATUS PILLS ================= */
+
+.status-badge {
+  padding: 7px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.status-badge.pickup {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.status-badge.washing {
+  background: #ecfdf5;
+  color: #166534;
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.15);
+}
+
+.status-badge.delivered {
+  background: #dcfce7;
+  color: #166534;
+}
+
+/* ================= ACTION LINK ================= */
+
+.table-action {
+  background: #2563eb;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.table-action:hover {
+  background: #1e40af;
+}
+
+    </style>
+
+  </head>
+
+  <body>
+    <!-- ================= LOADER ================= -->
+    <div id="loader">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- Top Info Bar -->
+    <div class="top-bar">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div class="top-left d-flex align-items-center">
+          <div class="top-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+91 90XXXXXXXX</span>
+          </div>
+
+          <div class="top-divider"></div>
+
+          <div class="top-item">
+            <i class="fa-solid fa-clock"></i>
+            <span>Mon – Sat, 9:00 AM – 7:00 PM</span>
+          </div>
+        </div>
+
+        <div class="top-right">
+          <div class="welcome-user">
+            <i class="fa-solid fa-hospital"></i>
+            <span>Welcome, <strong>XX Hospital</strong></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="main-header">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img
+              src="../assets/img/logos/RRLOGO.png"
+              alt="Laundry Express"
+              class="navbar-logo"
+            />
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navMenu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navMenu">
+            <div class="mobile-top-bar">
+              <div class="mobile-top-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>+91 90XXXXXXXX</span>
+              </div>
+
+              <div class="mobile-top-item">
+                <i class="fa-solid fa-clock"></i>
+                <span>Mon – Sat, 9:00 AM – 7:00 PM</span>
+              </div>
+
+              <div class="mobile-top-item">
+                <a href="Login.html" class="mobile-top-link">Sign In</a>
+              </div>
+            </div>
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faq.html">FAQ</a>
+              </li>
+              <li class="nav-item dropdown ms-lg-3">
+                <a
+                  class="nav-link dropdown-toggle account-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fa-solid fa-hospital"></i>
+                  <span class="d-none d-lg-inline">XX Hospital</span>
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-end account-dropdown">
+                  <li>
+                    <a class="dropdown-item" href="account.html">
+                      <i class="fa-solid fa-user"></i> My Account
+                    </a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="orders.html">
+                      <i class="fa-solid fa-box"></i> Orders
+                    </a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="transactions.html">
+                      <i class="fa-solid fa-receipt"></i> Transactions
+                    </a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="scans.html">
+                      <i class="fa-solid fa-barcode"></i> All Scans
+                    </a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="cloths.html">
+                      <i class="fa-solid fa-shirt"></i> Cloths Details
+                    </a>
+                  </li>
+
+                  <li><hr class="dropdown-divider" /></li>
+
+                  <li>
+                    <a class="dropdown-item logout" href="logout.html">
+                      <i class="fa-solid fa-right-from-bracket"></i> Logout
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="dashboard">
+      <div class="container-fluid">
+        <!-- ================= PAGE HEADER ================= -->
+        <!-- ================= PAGE HEADER ================= -->
+<div class="orders-hero mb-4">
+  <div>
+    <h3>Orders Overview</h3>
+    <p>Track, manage and review all laundry batches</p>
+  </div>
+
+  <div class="orders-summary">
+    <div>
+      <span>Total Orders</span>
+      <strong>128</strong>
+    </div>
+    <div>
+      <span>Active</span>
+      <strong>4</strong>
+    </div>
+  </div>
+</div>
+
+
+       <div class="orders-filters mb-4">
+  <div class="filter-item">
+    <i class="fa-solid fa-filter"></i>
+    <select class="form-select">
+      <option>All Status</option>
+      <option>Pickup</option>
+      <option>Washing</option>
+      <option>Dispatch</option>
+      <option>Delivered</option>
+    </select>
+  </div>
+
+  <div class="filter-item">
+    <i class="fa-solid fa-calendar"></i>
+    <input type="date" class="form-control" />
+  </div>
+</div>
+
+
+        <!-- ================= ORDERS TABLE ================= -->
+        <div class="section-block">
+          <div class="table-responsive">
+            <table class="table orders-table align-middle">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Date</th>
+                  <th>Total Linen</th>
+                  <th>Bill Amount</th>
+                  <th>Status</th>
+                  <th></th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td><strong>#LX1023</strong></td>
+                  <td>10 Feb 2026</td>
+                  <td>1,250</td>
+                  <td class="amount">₹18,500</td>
+                  <td><span class="status-badge delivered">Delivered</span></td>
+                  <td>
+                    <a href="order-details.html" class="table-action">View</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><strong>#LX1024</strong></td>
+                  <td>12 Feb 2026</td>
+                  <td>1,000</td>
+                  <td class="amount">₹15,200</td>
+                  <td><span class="status-badge washing">Washing</span></td>
+                  <td>
+                    <a href="#" class="table-action">Track</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><strong>#LX1025</strong></td>
+                  <td>14 Feb 2026</td>
+                  <td>980</td>
+                  <td class="amount">₹14,100</td>
+                  <td><span class="status-badge pickup">Pickup</span></td>
+                  <td>
+                    <a href="#" class="table-action">Track</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer footer-enhanced">
+      <div class="container">
+        <div class="row gy-4">
+          <!-- Company Info -->
+          <div class="col-lg-4 col-md-6">
+            <h5 class="footer-title">Laundry Express</h5>
+            <p class="footer-text">
+              Laundry Express provides specialized healthcare & institutional
+              laundry management solutions across Gurugram.
+              <br /><br />
+              <strong>Address:</strong><br />
+              VPO Dhankot, Dwarka Expressway,<br />
+              Sector 99, Gurugram – 122006
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-2 col-md-6">
+            <h5 class="footer-title">Quick Links</h5>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-lg-3 col-md-6">
+            <h5 class="footer-title">Contact Details</h5>
+            <ul class="footer-contact">
+              <li><strong>Phone:</strong> +91 9XXXXXXXXX</li>
+              <li><strong>Email:</strong> info@laundryexpress.com</li>
+              <li><strong>Hours:</strong> Mon – Sat, 9:00 AM – 7:00 PM</li>
+            </ul>
+          </div>
+
+          <!-- Social -->
+          <div class="col-lg-3 col-md-6">
+            <h5 class="footer-title">Follow Us</h5>
+            <div class="footer-social">
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="#" aria-label="Facebook"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+          <p>© 2026 Laundry Express. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ================= JS ================= -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/aos.js"></script>
+    <script src="../assets/js/loader.js"></script>
+    <script src="../assets/js/counter.js"></script>
+    <script src="../assets/js/hero-slider.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    <script>
+      AOS.init({
+        once: true,
+        duration: 900,
+        easing: "ease-out-cubic",
+      });
+    </script>
+  </body>
+</html>

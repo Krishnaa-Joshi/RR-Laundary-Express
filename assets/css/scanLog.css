@@ -1,0 +1,170 @@
+/* ================= SCAN LOG HERO ================= */
+
+.scan-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  padding: 30px 34px;
+  border-radius: 24px;
+  color: #ffffff;
+}
+
+.scan-hero h3 {
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.scan-hero p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.scan-hero-meta {
+  display: flex;
+  gap: 28px;
+}
+
+.scan-hero-meta span {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.scan-hero-meta strong {
+  display: block;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+/* ================= ORDER CARD ================= */
+
+.scan-order-card {
+  background: linear-gradient(135deg, #ffffff, #f8fafc);
+  border-radius: 24px;
+  padding: 26px;
+  box-shadow: 0 20px 55px rgba(15, 23, 42, 0.1);
+  height: 100%;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.scan-order-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.14);
+}
+
+/* Header */
+.scan-order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.scan-order-header h6 {
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+.scan-order-header span {
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* ================= PHASE LIST ================= */
+
+.scan-phases {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Phase card */
+.scan-phase {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  background: #f1f5f9;
+  padding: 16px 18px;
+  border-radius: 18px;
+  position: relative;
+}
+
+.scan-phase h6 {
+  margin: 0;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.scan-phase p {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: #475569;
+}
+
+/* Phase dot */
+.phase-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Phase colors */
+.phase-dot.pickup {
+  background: #2563eb;
+  box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.15);
+}
+
+.phase-dot.washing {
+  background: #22c55e;
+  box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.15);
+}
+
+.phase-dot.dispatch {
+  background: #f59e0b;
+  box-shadow: 0 0 0 6px rgba(245, 158, 11, 0.15);
+}
+
+.phase-dot.delivered {
+  background: #16a34a;
+  box-shadow: 0 0 0 6px rgba(22, 163, 74, 0.15);
+}
+
+/* Active phase */
+.scan-phase.active {
+  background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
+  border-left: 5px solid #22c55e;
+}
+
+/* Optional subtle connector feel */
+.scan-phase::after {
+  content: "";
+  position: absolute;
+  left: 23px;
+  top: 100%;
+  width: 2px;
+  height: 16px;
+  background: #e5e7eb;
+}
+
+.scan-phase:last-child::after {
+  display: none;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .scan-hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .scan-hero-meta {
+    gap: 20px;
+  }
+}

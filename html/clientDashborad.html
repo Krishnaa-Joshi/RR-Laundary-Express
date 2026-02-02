@@ -1,0 +1,1026 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Laundry Express | Healthcare Laundry Solutions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/img/logos/RRLOGO.png" />
+
+    <!-- Bootstrap CSS (CDN) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="../assets/css/aos.css" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <!-- <link rel="stylesheet" href="../assets/css/ClientDashboard.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      /* ================= WELCOME USER ================= */
+
+      .welcome-user {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        color: #ffffff;
+        font-weight: 500;
+        opacity: 0.95;
+      }
+
+      .welcome-user i {
+        font-size: 15px;
+        color: #22c55e;
+      }
+
+      .welcome-user strong {
+        font-weight: 700;
+      }
+
+      /* ================= ACCOUNT DROPDOWN ================= */
+
+      .account-toggle {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 600;
+        color: #0f172a;
+      }
+
+      .account-toggle i {
+        color: #22c55e;
+        font-size: 16px;
+      }
+
+      .account-dropdown {
+        border-radius: 14px;
+        padding: 10px 0;
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+        min-width: 220px;
+      }
+
+      /* Dropdown items */
+      .account-dropdown .dropdown-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 10px 16px;
+        color: #0f172a;
+      }
+
+      .account-dropdown .dropdown-item i {
+        width: 18px;
+        color: #64748b;
+      }
+
+      /* Hover */
+      .account-dropdown .dropdown-item:hover {
+        background: #f1f5f9;
+        color: #0f172a;
+      }
+
+      /* Logout emphasis */
+      .account-dropdown .dropdown-item.logout {
+        color: #dc2626;
+        font-weight: 600;
+      }
+
+      .account-dropdown .dropdown-item.logout i {
+        color: #dc2626;
+      }
+
+      /* ================= BASE ================= */
+      .dashboard-enhanced {
+        background: #f1f5f9;
+        padding: 32px;
+        min-height: 100vh;
+      }
+
+      /* ================= KPI CARDS ================= */
+      .stat-elevated {
+        background: #ffffff;
+        border-radius: 20px;
+        padding: 24px;
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+        transition: all 0.3s ease;
+      }
+
+      .stat-elevated:hover {
+        transform: translateY(-4px);
+      }
+
+      .stat-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 22px;
+      }
+
+      .stat-icon.total {
+        background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      }
+      .stat-icon.received {
+        background: linear-gradient(135deg, #22c55e, #16a34a);
+      }
+      .stat-icon.damaged {
+        background: linear-gradient(135deg, #f59e0b, #d97706);
+      }
+      .stat-icon.lost {
+        background: linear-gradient(135deg, #ef4444, #b91c1c);
+      }
+
+      /* ================= SECTION BLOCK ================= */
+      .section-block {
+        background: #ffffff;
+        border-radius: 22px;
+        padding: 26px;
+        box-shadow: 0 25px 60px rgba(15, 23, 42, 0.08);
+      }
+
+      .batch-header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 20px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .batch-title {
+        display: flex;
+        align-items: baseline;
+        gap: 12px;
+      }
+
+      .batch-title h5 {
+        margin: 0;
+        font-weight: 800;
+        color: #0f172a;
+      }
+
+      .batch-meta {
+        font-size: 14px;
+        color: #64748b;
+      }
+      /* ================= PHASE TRACKER ================= */
+
+      .phase-tracker {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        margin-top: 10px;
+      }
+
+      .phase {
+        flex: 1;
+        background: #f8fafc;
+        border-radius: 16px;
+        padding: 18px 14px;
+        text-align: center;
+        border: 2px solid transparent;
+      }
+
+      .phase-name {
+        display: block;
+        margin-top: 6px;
+        font-size: 15px;
+        font-weight: 600;
+        color: #0f172a;
+      }
+
+      .phase-icon {
+        font-size: 22px;
+      }
+
+      /* STATES */
+      .phase.completed {
+        background: #ecfdf5;
+        border-color: #22c55e;
+      }
+
+      .phase.completed .phase-icon {
+        color: #22c55e;
+      }
+
+      .phase.active {
+        background: linear-gradient(135deg, #1e3a8a, #2563eb);
+        color: #ffffff;
+        border-color: #1e3a8a;
+      }
+
+      .phase.active .phase-name {
+        color: #ffffff;
+      }
+
+      .phase.upcoming {
+        background: #f1f5f9;
+        opacity: 0.7;
+      }
+
+      /* META INFO */
+      .phase-meta {
+        margin-top: 18px;
+        padding: 14px;
+        background: #f8fafc;
+        border-radius: 14px;
+        font-size: 14px;
+        color: #475569;
+      }
+
+      /* ================= SCAN SECTION ================= */
+
+      .scan-section {
+        padding: 28px;
+      }
+
+      /* Header */
+      .scan-header {
+        display: flex;
+        align-items: baseline;
+        gap: 12px;
+        margin-bottom: 22px;
+      }
+
+      .scan-header h5 {
+        font-weight: 800;
+        color: #0f172a;
+        margin: 0;
+      }
+
+      .scan-subtitle {
+        font-size: 14px;
+        color: #64748b;
+      }
+
+      /* ================= TIMELINE ================= */
+
+      .scan-timeline {
+        position: relative;
+        padding-left: 34px;
+      }
+
+      /* Vertical line */
+      .scan-timeline::before {
+        content: "";
+        position: absolute;
+        left: 10px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(to bottom, #22c55e, #e5e7eb);
+      }
+
+      /* Each scan item */
+      .scan-item {
+        position: relative;
+        display: flex;
+        gap: 18px;
+        margin-bottom: 28px;
+      }
+
+      .scan-item:last-child {
+        margin-bottom: 0;
+      }
+
+      /* Dot */
+      .scan-dot {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        margin-top: 10px;
+        z-index: 2;
+      }
+
+      /* Phase colors */
+      .scan-dot.pickup {
+        background: #2563eb;
+      }
+      .scan-dot.washing {
+        background: #22c55e;
+      }
+      .scan-dot.dispatch {
+        background: #f59e0b;
+      }
+      .scan-dot.delivered {
+        background: #16a34a;
+      }
+
+      /* ================= CARD ================= */
+
+      .scan-content {
+        background: #f8fafc;
+        padding: 16px 20px;
+        border-radius: 16px;
+        width: 100%;
+        box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+
+      .scan-content:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+      }
+
+      .scan-content h6 {
+        font-weight: 700;
+        margin-bottom: 4px;
+        color: #0f172a;
+      }
+
+      .scan-content p {
+        font-size: 14px;
+        color: #475569;
+        margin: 0;
+      }
+
+      .scan-time {
+        font-size: 13px;
+        color: #64748b;
+        display: block;
+        margin-bottom: 6px;
+      }
+
+      /* ================= STATES ================= */
+
+      .scan-item.completed .scan-content {
+        opacity: 0.9;
+      }
+
+      /* Latest scan highlight */
+      .scan-item.latest .scan-content {
+        background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
+        border-left: 5px solid #22c55e;
+      }
+
+      .scan-item.latest h6 {
+        color: #166534;
+      }
+
+      /* Optional pulse for latest dot */
+      .scan-item.latest .scan-dot {
+        box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.15);
+      }
+
+      /* ================= ORDERS HEADER ================= */
+
+      .orders-header {
+        margin-bottom: 22px;
+      }
+
+      .orders-header h5 {
+        margin: 0;
+        font-weight: 800;
+        font-size: 18px;
+        color: #0f172a;
+      }
+
+      .orders-subtitle {
+        margin: 4px 0 0;
+        font-size: 14px;
+        color: #64748b;
+      }
+
+      /* ================= ORDER CARDS ================= */
+
+      .order-card {
+        background: linear-gradient(135deg, #f8fafc, #ffffff);
+        padding: 22px;
+        border-radius: 20px;
+        box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+        border: 1px solid rgba(15, 23, 42, 0.05);
+        height: 100%;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+
+      .order-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 26px 60px rgba(15, 23, 42, 0.12);
+      }
+
+      /* Header */
+      .order-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+      }
+
+      .order-header h6 {
+        font-weight: 800;
+        color: #0f172a;
+        margin: 0;
+      }
+
+      /* Status badge */
+      .order-status {
+        font-size: 12px;
+        font-weight: 700;
+        padding: 6px 12px;
+        border-radius: 999px;
+      }
+
+      .order-status.completed {
+        background: #ecfdf5;
+        color: #166534;
+      }
+
+      /* Body */
+      .order-body {
+        display: flex;
+        justify-content: space-between;
+        gap: 14px;
+        margin-bottom: 18px;
+      }
+
+      .order-metric {
+        background: #f1f5f9;
+        padding: 14px;
+        border-radius: 14px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .order-metric span {
+        display: block;
+        font-size: 13px;
+        color: #64748b;
+        margin-bottom: 4px;
+      }
+
+      .order-metric strong {
+        font-size: 18px;
+        font-weight: 800;
+        color: #0f172a;
+      }
+
+      /* Footer */
+      .order-footer {
+        text-align: right;
+      }
+
+      .order-link {
+        font-size: 13.5px;
+        font-weight: 600;
+        color: #2563eb;
+        text-decoration: none;
+      }
+
+      .order-link:hover {
+        text-decoration: underline;
+      }
+
+      /* ================= TRANSACTION SECTION ================= */
+
+      .transaction-section {
+        padding: 28px;
+      }
+
+      /* Header */
+      .transactions-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 22px;
+      }
+
+      .transactions-header h5 {
+        margin: 0;
+        font-weight: 800;
+        color: #0f172a;
+      }
+
+      .transactions-subtitle {
+        margin: 4px 0 0;
+        font-size: 14px;
+        color: #64748b;
+      }
+
+      .view-all {
+        font-size: 14px;
+        font-weight: 600;
+        color: #2563eb;
+        text-decoration: none;
+      }
+
+      .view-all:hover {
+        text-decoration: underline;
+      }
+
+      /* ================= TABLE ================= */
+
+      .transaction-table {
+        border-collapse: separate;
+        border-spacing: 0 14px;
+      }
+
+      .transaction-table thead th {
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: #64748b;
+        border: none;
+      }
+
+      .transaction-table tbody tr {
+        background: #ffffff;
+        box-shadow: 0 14px 35px rgba(15, 23, 42, 0.06);
+        border-radius: 14px;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+
+      .transaction-table tbody tr:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 20px 45px rgba(15, 23, 42, 0.1);
+      }
+
+      .transaction-table tbody td {
+        padding: 16px 18px;
+        border: none;
+        color: #334155;
+      }
+
+      .transaction-table tbody tr td:first-child {
+        border-radius: 14px 0 0 14px;
+      }
+
+      .transaction-table tbody tr td:last-child {
+        border-radius: 0 14px 14px 0;
+      }
+
+      /* Amount */
+      .amount {
+        font-weight: 800;
+        color: #0f172a;
+      }
+
+      /* ================= STATUS BADGES ================= */
+
+      .status-badge {
+        display: inline-block;
+        padding: 6px 14px;
+        border-radius: 999px;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .status-badge.paid {
+        background: #ecfdf5;
+        color: #166534;
+      }
+
+      .status-badge.pending {
+        background: #fff7ed;
+        color: #9a3412;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ================= LOADER ================= -->
+    <div id="loader">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- Top Info Bar -->
+    <div class="top-bar">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div class="top-left d-flex align-items-center">
+          <div class="top-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+91 90XXXXXXXX</span>
+          </div>
+
+          <div class="top-divider"></div>
+
+          <div class="top-item">
+            <i class="fa-solid fa-clock"></i>
+            <span>Mon – Sat, 9:00 AM – 7:00 PM</span>
+          </div>
+        </div>
+
+        <div class="top-right">
+          <div class="welcome-user">
+            <i class="fa-solid fa-hospital"></i>
+            <span>Welcome, <strong>XX Hospital</strong></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="main-header">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img
+              src="../assets/img/logos/RRLOGO.png"
+              alt="Laundry Express"
+              class="navbar-logo"
+            />
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navMenu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navMenu">
+            <div class="mobile-top-bar">
+              <div class="mobile-top-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>+91 90XXXXXXXX</span>
+              </div>
+
+              <div class="mobile-top-item">
+                <i class="fa-solid fa-clock"></i>
+                <span>Mon – Sat, 9:00 AM – 7:00 PM</span>
+              </div>
+
+              <div class="mobile-top-item">
+                <a href="Login.html" class="mobile-top-link">Sign In</a>
+              </div>
+            </div>
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faq.html">FAQ</a>
+              </li>
+              <li class="nav-item dropdown ms-lg-3">
+                <a
+                  class="nav-link dropdown-toggle account-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fa-solid fa-hospital"></i>
+                  <span class="d-none d-lg-inline">XX Hospital</span>
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-end account-dropdown">
+                  <li>
+                    <a class="dropdown-item" href="account.html">
+                      <i class="fa-solid fa-user"></i> My Account
+                    </a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="orders.html">
+                      <i class="fa-solid fa-box"></i> Orders
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="scans.html">
+                      <i class="fa-solid fa-barcode"></i> All Scans
+                    </a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="cloths.html">
+                      <i class="fa-solid fa-shirt"></i> Cloths Details
+                    </a>
+                  </li>
+
+                  <li><hr class="dropdown-divider" /></li>
+
+                  <li>
+                    <a class="dropdown-item logout" href="logout.html">
+                      <i class="fa-solid fa-right-from-bracket"></i> Logout
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="dashboard dashboard-enhanced">
+      <div class="container-fluid">
+        <!-- ================= KPI COUNTS ================= -->
+        <div class="row g-4 mb-4">
+          <div class="col-xl-3 col-md-6">
+            <div class="stat-card stat-elevated">
+              <div class="stat-icon total">
+                <i class="fa-solid fa-layer-group"></i>
+              </div>
+              <div>
+                <h6>Total Linen</h6>
+                <h3>12,480</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6">
+            <div class="stat-card stat-elevated">
+              <div class="stat-icon received">
+                <i class="fa-solid fa-box"></i>
+              </div>
+              <div>
+                <h6>Received</h6>
+                <h3>11,930</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6">
+            <div class="stat-card stat-elevated">
+              <div class="stat-icon damaged">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+              </div>
+              <div>
+                <h6>Damaged</h6>
+                <h3>210</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6">
+            <div class="stat-card stat-elevated">
+              <div class="stat-icon lost">
+                <i class="fa-solid fa-xmark-circle"></i>
+              </div>
+              <div>
+                <h6>Lost</h6>
+                <h3>340</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Current Batch Status -->
+        <div class="section-block mb-4">
+          <div class="batch-header">
+            <div class="batch-title">
+              <h5>Current Batch Status</h5>
+              <span class="batch-meta">Order #LX1023 • 1,000 Items</span>
+            </div>
+          </div>
+
+          <div class="phase-tracker">
+            <div class="phase completed">
+              <span class="phase-icon">✔</span>
+              <span class="phase-name">Pickup</span>
+            </div>
+
+            <div class="phase active">
+              <span class="phase-icon">⟳</span>
+              <span class="phase-name">Washing</span>
+            </div>
+
+            <div class="phase upcoming">
+              <span class="phase-icon">⏳</span>
+              <span class="phase-name">Dispatch</span>
+            </div>
+
+            <div class="phase upcoming">
+              <span class="phase-icon">⏳</span>
+              <span class="phase-name">Delivered</span>
+            </div>
+          </div>
+
+          <div class="phase-meta">
+            <p>
+              <strong>Current Phase:</strong> Washing<br />
+              <strong>Total Linen in Batch:</strong> 1,000 Items
+            </p>
+          </div>
+        </div>
+
+        <!-- ================= STATUS + SCANS + ORDERS ================= -->
+        <div class="row g-4 mb-4">
+          <!-- LEFT: CURRENT STATUS + SCAN LOGS -->
+          <div class="col-lg-6">
+            <!-- Recent Scan Logs -->
+            <div class="section-block scan-section">
+              <div class="scan-header">
+                <h5>Recent Scan Logs</h5>
+                <span class="scan-subtitle">Last 24 Hours</span>
+              </div>
+
+              <div class="scan-timeline">
+                <div class="scan-item active latest">
+                  <div class="scan-dot delivered"></div>
+                  <div class="scan-content">
+                    <span class="scan-time">01:10 PM</span>
+                    <h6>Delivered (Final Scan)</h6>
+                    <p>390 Items • Scanned by Rahul</p>
+                  </div>
+                </div>
+
+                <div class="scan-item completed">
+                  <div class="scan-dot dispatch"></div>
+                  <div class="scan-content">
+                    <span class="scan-time">12:05 PM</span>
+                    <h6>Dispatch Completed</h6>
+                    <p>280 Items • Scanned by Suresh</p>
+                  </div>
+                </div>
+
+                <div class="scan-item completed">
+                  <div class="scan-dot washing"></div>
+                  <div class="scan-content">
+                    <span class="scan-time">11:20 AM</span>
+                    <h6>Washing Completed</h6>
+                    <p>450 Items • Scanned by Anil</p>
+                  </div>
+                </div>
+
+                <div class="scan-item completed">
+                  <div class="scan-dot pickup"></div>
+                  <div class="scan-content">
+                    <span class="scan-time">10:42 AM</span>
+                    <h6>Pickup Completed</h6>
+                    <p>320 Items • Scanned by Ravi</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: ORDER HISTORY -->
+          <div class="col-lg-6">
+            <div class="section-block h-100">
+              <div class="orders-header">
+                <h5>Recent Orders</h5>
+                <p class="orders-subtitle">Previous Orders</p>
+              </div>
+
+              <div class="row g-3">
+                <div class="col-md-12">
+                  <div class="order-card">
+                    <div class="order-header">
+                      <h6>Order #LX1023</h6>
+                      <span class="order-status completed">Completed</span>
+                    </div>
+
+                    <div class="order-body">
+                      <div class="order-metric">
+                        <span>Total Linen</span>
+                        <strong>1,250</strong>
+                      </div>
+
+                      <div class="order-metric">
+                        <span>Bill Amount</span>
+                        <strong>₹18,500</strong>
+                      </div>
+                    </div>
+
+                    <div class="order-footer">
+                      <a href="#" class="order-link">View Details →</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="order-card">
+                    <div class="order-header">
+                      <h6>Order #LX1022</h6>
+                      <span class="order-status completed">Completed</span>
+                    </div>
+
+                    <div class="order-body">
+                      <div class="order-metric">
+                        <span>Total Linen</span>
+                        <strong>980</strong>
+                      </div>
+
+                      <div class="order-metric">
+                        <span>Bill Amount</span>
+                        <strong>₹14,200</strong>
+                      </div>
+                    </div>
+
+                    <div class="order-footer">
+                      <a href="#" class="order-link">View Details →</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer footer-enhanced">
+      <div class="container">
+        <div class="row gy-4">
+          <!-- Company Info -->
+          <div class="col-lg-4 col-md-6">
+            <h5 class="footer-title">Laundry Express</h5>
+            <p class="footer-text">
+              Laundry Express provides specialized healthcare & institutional
+              laundry management solutions across Gurugram.
+              <br /><br />
+              <strong>Address:</strong><br />
+              VPO Dhankot, Dwarka Expressway,<br />
+              Sector 99, Gurugram – 122006
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-2 col-md-6">
+            <h5 class="footer-title">Quick Links</h5>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-lg-3 col-md-6">
+            <h5 class="footer-title">Contact Details</h5>
+            <ul class="footer-contact">
+              <li><strong>Phone:</strong> +91 9XXXXXXXXX</li>
+              <li><strong>Email:</strong> info@laundryexpress.com</li>
+              <li><strong>Hours:</strong> Mon – Sat, 9:00 AM – 7:00 PM</li>
+            </ul>
+          </div>
+
+          <!-- Social -->
+          <div class="col-lg-3 col-md-6">
+            <h5 class="footer-title">Follow Us</h5>
+            <div class="footer-social">
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="#" aria-label="Facebook"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+          <p>© 2026 Laundry Express. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ================= JS ================= -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/aos.js"></script>
+    <script src="../assets/js/loader.js"></script>
+    <script src="../assets/js/counter.js"></script>
+    <script src="../assets/js/hero-slider.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    <script>
+      AOS.init({
+        once: true,
+        duration: 900,
+        easing: "ease-out-cubic",
+      });
+    </script>
+  </body>
+</html>
