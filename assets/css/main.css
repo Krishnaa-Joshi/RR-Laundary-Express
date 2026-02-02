@@ -146,7 +146,7 @@ section p {
 /* ================= NAVBAR ================= */
 
 .main-header {
-  /* position: sticky; */
+  position: sticky;
   top: 0;
   z-index: 1000;
   background: rgba(255, 255, 255, 0.9);
@@ -157,7 +157,7 @@ section p {
 }
 
 .navbar-logo {
-  height: 40px;
+  height: 50px;
   width: 300px;
 }
 
@@ -292,7 +292,7 @@ section p {
 .hero {
   position: relative;
   min-height: 50vh;
-  padding: 160px 0 120px;
+  padding: 100px 0 120px;
   overflow: hidden;
 }
 
@@ -360,7 +360,6 @@ section p {
 
 .hero-bg {
   position: relative;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   background-size: cover;
@@ -377,14 +376,17 @@ section p {
 }
 
 .service-hero-bg{
+  min-height: 85vh;
   background-image: url("../img/hero/63f54924fc7ef34ed0b4462c04e3a768.jpg");
 }
 
 .faq-hero-bg{
+  min-height: 85vh;
   background-image: url("../img/hero/faq.jpg");
 }
 
 .contact-hero-bg{
+  min-height: 85vh;
   background-image: url("../img/hero/customer-support.jpg");
 }
 
@@ -1321,149 +1323,4 @@ section p {
 }
 
 
-/* ===============================
-   LOGIN PAGE BASE
-================================ */
 
-.login-page {
-  position: relative;
-  min-height: 100vh;
-  background-image: url("../img/hero/hero-img-7.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-/* Dark overlay */
-.login-overlay {
-  position: absolute;
-  inset: 0;
-   background: rgba(15, 23, 42, 0.75);
-  z-index: 1;
-}
-
-/* ===============================
-   LOGIN CARD
-================================ */
-
-.login-card {
-  position: relative;
-  z-index: 2;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(12px);
-  border-radius: 20px;
-  padding: 40px 36px;
-  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.35);
-}
-
-/* Header */
-.login-header img {
-  height: 48px;
-  margin-bottom: 16px;
-}
-
-.login-header h2 {
-  font-size: 26px;
-  font-weight: 800;
-  color: #0f172a;
-}
-
-.login-header p {
-  font-size: 14.5px;
-  color: #475569;
-  margin-bottom: 28px;
-}
-
-/* ===============================
-   FORM
-================================ */
-
-.form-group {
-  margin-bottom: 18px;
-}
-
-.form-group label {
-  font-size: 14px;
-  font-weight: 600;
-  color: #0f172a;
-  margin-bottom: 6px;
-}
-
-.input-group-text {
-  background: #f1f5f9;
-  border: none;
-  color: #2563eb;
-}
-
-.form-control {
-  border: none;
-  background: #f1f5f9;
-  padding: 12px 14px;
-  font-size: 14px;
-}
-
-.form-control:focus {
-  box-shadow: none;
-  border: 1px solid #2563eb;
-  background: #ffffff;
-}
-
-/* ===============================
-   LINKS & BUTTONS
-================================ */
-
-.forgot-link {
-  font-size: 13px;
-  font-weight: 600;
-  color: #2563eb;
-  text-decoration: none;
-}
-
-.forgot-link:hover {
-  text-decoration: underline;
-}
-
-.btn-primary {
-  padding: 12px;
-  font-size: 15px;
-  font-weight: 600;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #1e3a8a, #2563eb);
-  border: none;
-}
-
-.btn-primary:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 10px 30px rgba(30, 58, 138, 0.4);
-}
-
-/* ===============================
-   FOOTER
-================================ */
-
-.login-footer {
-  margin-top: 28px;
-}
-
-.login-footer p {
-  font-size: 12.5px;
-  color: #64748b;
-}
-
-.login-footer span {
-  font-weight: 600;
-  color: #0f172a;
-}
-
-/* ===============================
-   RESPONSIVE
-================================ */
-
-@media (max-width: 576px) {
-  .login-card {
-    padding: 32px 24px;
-  }
-
-  .login-header h2 {
-    font-size: 22px;
-  }
-}
