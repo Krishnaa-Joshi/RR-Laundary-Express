@@ -1,0 +1,428 @@
+/* ===== DASHBOARD WRAPPER ===== */
+.delivery-dashboard {
+  max-width: 1320px;
+}
+
+/* ===== SECTION BASE ===== */
+.section-block {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #0f172a;
+}
+
+/* ===== HERO ===== */
+.delivery-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  padding: 28px 32px;
+  border-radius: 22px;
+  color: #ffffff;
+}
+
+/* Profile Section  */
+.profile-card.enhanced {
+  background: #ffffff;
+  padding: 26px 24px;
+  border-radius: 22px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.1);
+  height: 100%;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.profile-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.profile-header h5 {
+  margin: 0;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.profile-role {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.profile-divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 18px 0;
+}
+
+.profile-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-details li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 14px;
+  border-bottom: 1px dashed #e5e7eb;
+}
+
+.profile-details li:last-child {
+  border-bottom: none;
+}
+
+.profile-details span {
+  color: #64748b;
+}
+
+.profile-details strong {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+/* Scan Card Button */
+.scan-action-card.enhanced {
+  height: 100%;
+  background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
+  padding: 36px 32px;
+  border-radius: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  box-shadow: 0 20px 50px rgba(16, 185, 129, 0.15);
+}
+
+.scan-action-header {
+  text-align: center;
+}
+
+.scan-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #166534;
+  background: #dcfce7;
+  padding: 6px 12px;
+  border-radius: 999px;
+  margin-bottom: 6px;
+}
+
+.scan-action-header h5 {
+  margin: 0;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.scan-btn {
+  width: 100%;
+  padding: 22px;
+  font-size: 18px;
+  font-weight: 800;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  box-shadow: 0 25px 55px rgba(34, 197, 94, 0.45);
+  transition: all 0.25s ease;
+}
+
+.scan-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 30px 65px rgba(34, 197, 94, 0.55);
+}
+
+.scan-btn:active {
+  transform: scale(0.97);
+}
+
+.scan-icon {
+  background: rgba(255, 255, 255, 0.18);
+  padding: 10px 12px;
+  border-radius: 14px;
+  font-size: 20px;
+}
+
+.scan-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 14px 18px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.scan-info {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.scan-footer strong {
+  font-size: 18px;
+  font-weight: 800;
+  color: #166534;
+}
+
+/* RFID tags Allocated card */
+.rfid-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.rfid-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 18px 20px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rfid-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+}
+
+.rfid-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.rfid-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.rfid-left h6 {
+  margin: 0;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.rfid-sub {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.rfid-right {
+  background: #f1f5f9;
+  padding: 10px 16px;
+  border-radius: 14px;
+}
+
+.rfid-range {
+  font-weight: 700;
+  font-size: 14px;
+  color: #0f172a;
+  letter-spacing: 0.4px;
+}
+
+
+/* Delivery History */
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  border-radius: 16px;
+  margin-bottom: 14px;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+}
+
+.history-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.history-content {
+  flex: 1;
+}
+
+.history-status {
+  display: block;
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.history-meta {
+  font-size: 14px;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.history-item.pickup {
+  background: linear-gradient(135deg, #eff6ff, #f8fbff);
+  color: #1d4ed8;
+}
+
+.history-item.pickup .history-icon {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.history-item.drop {
+  background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
+  color: #166534;
+}
+
+.history-item.drop .history-icon {
+  background: #22c55e;
+  color: #ffffff;
+}
+
+/* Scan Logs */
+.log-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #f8fafc;
+  padding: 14px 16px;
+  border-radius: 14px;
+  margin-bottom: 10px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+}
+
+.log-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.log-content {
+  flex: 1;
+}
+
+.log-action {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.log-content p {
+  margin: 0;
+  font-size: 13px;
+  color: #475569;
+}
+
+.log-item.pickup {
+  background: linear-gradient(135deg, #eff6ff, #f8fbff);
+}
+
+.log-item.pickup .log-icon {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.log-item.drop {
+  background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
+}
+
+.log-item.drop .log-icon {
+  background: #22c55e;
+  color: #ffffff;
+}
+
+/* Missing Tags */
+
+.missing-tags {
+  background: linear-gradient(135deg, #fff7ed, #fffbf5);
+  border-left: 6px solid #f59e0b;
+  padding: 26px;
+}
+
+.missing-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.missing-header i {
+  font-size: 22px;
+  color: #f59e0b;
+}
+
+.missing-header h5 {
+  margin: 0;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.missing-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 14px 18px;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+}
+
+.hospital-name {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.tag-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tag-badge {
+  background: #fff7ed;
+  border: 1px solid #f59e0b;
+  color: #9a3412;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+}

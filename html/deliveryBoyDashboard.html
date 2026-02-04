@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Laundry Express | Healthcare Laundry Solutions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/img/logos/RRLOGO.png" />
+
+    <!-- Bootstrap CSS (CDN) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="../assets/css/aos.css" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/deliveryBoyDashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!-- ================= LOADER ================= -->
+    <div id="loader">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- Top Info Bar -->
+    <div class="top-bar">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div class="top-left d-flex align-items-center">
+          <div class="top-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+91 90XXXXXXXX</span>
+          </div>
+
+          <div class="top-divider"></div>
+
+          <div class="top-item">
+            <i class="fa-solid fa-clock"></i>
+            <span>Mon – Sat, 9:00 AM – 7:00 PM</span>
+          </div>
+        </div>
+
+        <div class="top-right">
+          <div class="welcome-user">
+            <i class="fa-solid fa-hospital"></i>
+            <span>Welcome, <strong>XX Hospital</strong></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="main-header">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img
+              src="../assets/img/logos/RRLOGO.png"
+              alt="Laundry Express"
+              class="navbar-logo"
+            />
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navMenu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navMenu">
+            <div class="mobile-top-bar">
+              <div class="mobile-top-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>+91 90XXXXXXXX</span>
+              </div>
+
+              <div class="mobile-top-item">
+                <i class="fa-solid fa-clock"></i>
+                <span>Mon – Sat, 9:00 AM – 7:00 PM</span>
+              </div>
+
+              <div class="mobile-top-item">
+                <a href="Login.html" class="mobile-top-link">Sign In</a>
+              </div>
+            </div>
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faq.html">FAQ</a>
+              </li>
+
+              <li class="nav-item dropdown ms-lg-3">
+                <a
+                  class="nav-link dropdown-toggle account-toggle"
+                  data-bs-toggle="dropdown"
+                >
+                  <i class="fa-solid fa-user"></i> Ravi Kumar
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">My Profile</a></li>
+                  <li><a class="dropdown-item" href="#">Scan Logs</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item logout" href="#">Logout</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ================= DASHBOARD ================= -->
+    <main class="delivery-dashboard container my-4">
+      <!-- HERO -->
+      <div class="delivery-hero mb-4">
+        <div>
+          <h3>Delivery Dashboard</h3>
+          <p>RFID scanning & delivery tracking</p>
+        </div>
+        <div class="delivery-meta">
+          <div>
+            <span>Today’s Scans</span>
+            <strong>620</strong>
+          </div>
+          <div>
+            <span>Hospitals</span>
+            <strong>3</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROFILE + SCAN -->
+      <div class="row g-4 mb-4">
+        <div class="col-lg-4">
+          <div class="profile-card enhanced">
+            <!-- Header -->
+            <div class="profile-header">
+              <div class="profile-avatar">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div>
+                <h5>Ravi Kumar</h5>
+                <span class="profile-role">Delivery Executive</span>
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="profile-divider"></div>
+
+            <!-- Details -->
+            <ul class="profile-details">
+              <li>
+                <span>ID</span>
+                <strong>DB-102</strong>
+              </li>
+              <li>
+                <span>Phone</span>
+                <strong>+91 9XXXXXXXXX</strong>
+              </li>
+              <li>
+                <span>Vehicle</span>
+                <strong>HR26 AB 1234</strong>
+              </li>
+              <li>
+                <span>Shift</span>
+                <strong>9 AM – 7 PM</strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Scan Button -->
+        <div class="col-lg-8">
+          <div class="scan-action-card enhanced">
+            <div class="scan-action-header">
+              <span class="scan-label">RFID Scanner</span>
+              <h5>Quick Scan</h5>
+            </div>
+
+            <button class="scan-btn">
+              <span class="scan-icon">
+                <i class="fa-solid fa-barcode"></i>
+              </span>
+              <span class="scan-text">Tap to Scan RFID</span>
+            </button>
+
+            <div class="scan-footer">
+              <span class="scan-info">Last Scan</span>
+              <strong>128 Tags</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RFID TAGS -->
+      <div class="section-block mb-4">
+        <h5 class="section-title">RFID Tags Allotted</h5>
+
+        <div class="rfid-list">
+          <!-- City Hospital -->
+          <div class="rfid-item">
+            <div class="rfid-left">
+              <div class="rfid-icon">
+                <i class="fa-solid fa-hospital"></i>
+              </div>
+              <div>
+                <h6>City Hospital</h6>
+                <span class="rfid-sub">Assigned Tags</span>
+              </div>
+            </div>
+
+            <div class="rfid-right">
+              <span class="rfid-range">RX0100 – RX0250</span>
+            </div>
+          </div>
+
+          <!-- Care Hospital -->
+          <div class="rfid-item">
+            <div class="rfid-left">
+              <div class="rfid-icon">
+                <i class="fa-solid fa-hospital"></i>
+              </div>
+              <div>
+                <h6>Care Hospital</h6>
+                <span class="rfid-sub">Assigned Tags</span>
+              </div>
+            </div>
+
+            <div class="rfid-right">
+              <span class="rfid-range">RX0300 – RX0450</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Delivery History -->
+      <div class="row g-4 mb-4">
+        <div class="col-lg-6">
+          <div class="section-block">
+            <h5 class="section-title">Delivery History</h5>
+
+            <div class="history-item pickup">
+              <div class="history-icon">
+                <i class="fa-solid fa-arrow-up"></i>
+              </div>
+              <div class="history-content">
+                <span class="history-status">Pickup Completed</span>
+                <p class="history-meta">
+                  City Hospital • 10:15 AM • <strong>320 Items</strong>
+                </p>
+              </div>
+            </div>
+            <div class="history-item drop">
+              <div class="history-icon">
+                <i class="fa-solid fa-arrow-down"></i>
+              </div>
+              <div class="history-content">
+                <span class="history-status">Drop Completed</span>
+                <p class="history-meta">
+                  Care Hospital • 01:45 PM • <strong>300 Items</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scan Logs -->
+        <div class="col-lg-6">
+          <div class="section-block">
+            <h5 class="section-title">Scan Logs</h5>
+            <div class="log-item pickup">
+              <div class="log-icon">
+                <i class="fa-solid fa-arrow-up"></i>
+              </div>
+              <div class="log-content">
+                <span class="log-action">Pickup Scan</span>
+                <p>City Hospital • <strong>320 Tags</strong></p>
+              </div>
+            </div>
+            <div class="log-item drop">
+              <div class="log-icon">
+                <i class="fa-solid fa-arrow-down"></i>
+              </div>
+              <div class="log-content">
+                <span class="log-action">Drop Scan</span>
+                <p>Care Hospital • <strong>300 Tags</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MISSING TAGS -->
+      <div class="section-block missing-tags">
+        <div class="missing-header">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <h5>Missing Tags</h5>
+        </div>
+
+        <div class="missing-list">
+          <div class="missing-item">
+            <span class="hospital-name">City Hospital</span>
+            <div class="tag-badges">
+              <span class="tag-badge">RX0211</span>
+              <span class="tag-badge">RX0219</span>
+            </div>
+          </div>
+
+          <div class="missing-item">
+            <span class="hospital-name">Care Hospital</span>
+            <div class="tag-badges">
+              <span class="tag-badge">RX0332</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer footer-enhanced">
+      <div class="container">
+        <div class="row gy-4">
+          <!-- Company Info -->
+          <div class="col-lg-4 col-md-6">
+            <h5 class="footer-title">Laundry Express</h5>
+            <p class="footer-text">
+              Laundry Express provides specialized healthcare & institutional
+              laundry management solutions across Gurugram.
+              <br /><br />
+              <strong>Address:</strong><br />
+              VPO Dhankot, Dwarka Expressway,<br />
+              Sector 99, Gurugram – 122006
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-2 col-md-6">
+            <h5 class="footer-title">Quick Links</h5>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-lg-3 col-md-6">
+            <h5 class="footer-title">Contact Details</h5>
+            <ul class="footer-contact">
+              <li><strong>Phone:</strong> +91 9XXXXXXXXX</li>
+              <li><strong>Email:</strong> info@laundryexpress.com</li>
+              <li><strong>Hours:</strong> Mon – Sat, 9:00 AM – 7:00 PM</li>
+            </ul>
+          </div>
+
+          <!-- Social -->
+          <div class="col-lg-3 col-md-6">
+            <h5 class="footer-title">Follow Us</h5>
+            <div class="footer-social">
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="#" aria-label="Facebook"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+          <p>© 2026 Laundry Express. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ================= JS ================= -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/aos.js"></script>
+    <script src="../assets/js/loader.js"></script>
+    <script src="../assets/js/counter.js"></script>
+    <script src="../assets/js/hero-slider.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    <script>
+      AOS.init({
+        once: true,
+        duration: 900,
+        easing: "ease-out-cubic",
+      });
+    </script>
+  </body>
+</html>
