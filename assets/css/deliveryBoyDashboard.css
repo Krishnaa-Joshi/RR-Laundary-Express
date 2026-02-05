@@ -1,9 +1,6 @@
-/* ===== DASHBOARD WRAPPER ===== */
 .delivery-dashboard {
   max-width: 1320px;
 }
-
-/* ===== SECTION BASE ===== */
 .section-block {
   background: #ffffff;
   padding: 24px;
@@ -17,7 +14,7 @@
   color: #0f172a;
 }
 
-/* ===== HERO ===== */
+/* top bar */
 .delivery-hero {
   display: flex;
   justify-content: space-between;
@@ -28,7 +25,7 @@
   color: #ffffff;
 }
 
-/* Profile Section  */
+/* Profile */
 .profile-card.enhanced {
   background: #ffffff;
   padding: 26px 24px;
@@ -100,7 +97,7 @@
   font-weight: 700;
 }
 
-/* Scan Card Button */
+/* Scan Button */
 .scan-action-card.enhanced {
   height: 100%;
   background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
@@ -370,7 +367,6 @@
 }
 
 /* Missing Tags */
-
 .missing-tags {
   background: linear-gradient(135deg, #fff7ed, #fffbf5);
   border-left: 6px solid #f59e0b;

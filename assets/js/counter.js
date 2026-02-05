@@ -2,7 +2,7 @@ const counters = document.querySelectorAll(".counter");
 
 const runCounter = (counter) => {
   const target = +counter.getAttribute("data-target");
-  const speed = 200; // smaller = faster
+  const speed = 200;
 
   const updateCount = () => {
     const current = +counter.innerText;

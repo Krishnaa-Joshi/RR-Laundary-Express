@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const currentPage = window.location.pathname.split("/").pop();
+  const currPage = window.location.pathname.split("/").pop();
 
-  const navLinks = document.querySelectorAll(".nav-link");
+  const navPage = document.querySelectorAll(".nav-link");
 
-  navLinks.forEach(link => {
-    const linkPage = link.getAttribute("href");
+  navPage.forEach(link => {
+    const Page = link.getAttribute("href");
 
-    if (linkPage === currentPage || 
-        (currentPage === "" && linkPage === "index.html")) {
+    if (Page === currPage || 
+        (currPage === "" && Page === "index.html")) {
       link.classList.add("active");
     }
   });
