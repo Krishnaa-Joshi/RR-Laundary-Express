@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>Laundry Express | Healthcare Laundry Solutions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="../assets/img/logos/RRLOGO.png" />
+    <link rel="icon" href="../../assets/img/logos/RRLOGO.png" />
 
     <!-- Bootstrap CSS (CDN) -->
     <link
@@ -13,12 +13,12 @@
     />
 
     <!-- AOS -->
-    <link rel="stylesheet" href="../assets/css/aos.css" />
+    <link rel="stylesheet" href="../../assets/css/aos.css" />
 
     <!-- Main CSS -->
     <!-- <link rel="stylesheet" href="../assets/css/main.css" /> -->
     <!-- <link rel="stylesheet" href="../assets/css/scanLog.css" /> -->
-     
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -28,7 +28,7 @@
     />
 
     <style>
-           html {
+      html {
         scroll-behavior: smooth;
       }
 
@@ -392,6 +392,13 @@
         }
       }
 
+      /* Dashboard */
+      .dashboard {
+        background: #f1f5f9;
+        padding: 28px;
+        min-height: 100vh;
+      }
+
       /* Scan Logs top bar */
       .scan-hero {
         display: flex;
@@ -401,6 +408,7 @@
         padding: 30px 34px;
         border-radius: 24px;
         color: #ffffff;
+        box-shadow: 0 30px 70px rgba(15, 23, 42, 0.35);
       }
 
       .scan-hero h3 {
@@ -430,7 +438,18 @@
         font-weight: 800;
       }
 
-      /* Scan Logs Hospital wise */
+      .scan-hero-meta .meta-box {
+        background: rgba(255, 255, 255, 0.12);
+        padding: 14px 18px;
+        border-radius: 16px;
+        text-align: center;
+        backdrop-filter: blur(8px);
+      }
+
+      .scan-hero-meta .meta-box.active {
+        background: rgba(34, 197, 94, 0.18);
+      }
+
       .scan-order-card {
         background: linear-gradient(135deg, #ffffff, #f8fafc);
         border-radius: 24px;
@@ -440,6 +459,8 @@
         transition:
           transform 0.25s ease,
           box-shadow 0.25s ease;
+        position: relative;
+        overflow: hidden;
       }
 
       .scan-order-card:hover {
@@ -467,12 +488,22 @@
         color: #64748b;
       }
 
+      .scan-order-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 6px;
+        width: 100%;
+        background: linear-gradient(90deg, #1e3a8a, #22c55e);
+      }
+
       .scan-phases {
         display: flex;
         flex-direction: column;
         gap: 18px;
       }
-
+      
       .scan-phase {
         display: flex;
         gap: 16px;
@@ -481,6 +512,13 @@
         padding: 16px 18px;
         border-radius: 18px;
         position: relative;
+        transition: all 0.25s ease;
+        
+      }
+      
+      .scan-phase:hover {
+        transform: translateX(4px);
+        background: #eef2ff;
       }
 
       .scan-phase h6 {
@@ -500,6 +538,7 @@
         height: 16px;
         border-radius: 50%;
         flex-shrink: 0;
+        margin-left: 6px;
       }
 
       .phase-dot.pickup {
@@ -541,6 +580,10 @@
         display: none;
       }
 
+      .scan-phase.active {
+        box-shadow: 0 12px 30px rgba(34, 197, 94, 0.25);
+      }
+
       @media (max-width: 768px) {
         .scan-hero {
           flex-direction: column;
@@ -550,6 +593,67 @@
 
         .scan-hero-meta {
           gap: 20px;
+        }
+      }
+
+      @media (max-width: 992px) {
+        .dashboard {
+          padding: 20px;
+        }
+
+        .scan-order-card {
+          padding: 22px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .scan-hero {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 16px;
+          padding: 24px;
+        }
+
+        .scan-hero-meta {
+          width: 100%;
+          justify-content: space-between;
+        }
+
+        .scan-order-card {
+          padding: 20px;
+        }
+
+        .scan-phase {
+          gap: 14px;
+          padding: 14px;
+        }
+
+        .scan-phase h6 {
+          font-size: 14px;
+        }
+
+        .scan-phase p {
+          font-size: 12.5px;
+        }
+
+        .scan-phase::after {
+          left: 22px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .scan-hero h3 {
+          font-size: 20px;
+        }
+
+        .scan-hero-meta strong {
+          font-size: 18px;
+        }
+
+        .scan-order-header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 6px;
         }
       }
     </style>
@@ -591,9 +695,12 @@
     <header class="main-header">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <a
+            class="navbar-brand d-flex align-items-center"
+            href="../index.html"
+          >
             <img
-              src="../assets/img/logos/RRLOGO.png"
+              src="../../assets/img/logos/RRLOGO.png"
               alt="Laundry Express"
               class="navbar-logo"
             />
@@ -619,24 +726,19 @@
                 <i class="fa-solid fa-clock"></i>
                 <span>Mon – Sat, 9:00 AM – 7:00 PM</span>
               </div>
-
-              <div class="mobile-top-item">
-                <a href="Login.html" class="mobile-top-link">Sign In</a>
-              </div>
             </div>
 
             <ul class="navbar-nav ms-auto align-items-lg-center">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="../client/clothCount.html"
+                  >RFID Details</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
+                <a class="nav-link" href="../client/orders.html">Orders</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="services.html">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="faq.html">FAQ</a>
+                <a class="nav-link" href="../client/scanLogs.html">Scan Logs</a>
               </li>
               <li class="nav-item dropdown ms-lg-3">
                 <a
@@ -652,39 +754,15 @@
 
                 <ul class="dropdown-menu dropdown-menu-end account-dropdown">
                   <li>
-                    <a class="dropdown-item" href="account.html">
+                    <a class="dropdown-item" href="./clientDashborad.html">
                       <i class="fa-solid fa-user"></i> My Account
-                    </a>
-                  </li>
-
-                  <li>
-                    <a class="dropdown-item" href="orders.html">
-                      <i class="fa-solid fa-box"></i> Orders
-                    </a>
-                  </li>
-
-                  <li>
-                    <a class="dropdown-item" href="transactions.html">
-                      <i class="fa-solid fa-receipt"></i> Transactions
-                    </a>
-                  </li>
-
-                  <li>
-                    <a class="dropdown-item" href="scans.html">
-                      <i class="fa-solid fa-barcode"></i> All Scans
-                    </a>
-                  </li>
-
-                  <li>
-                    <a class="dropdown-item" href="cloths.html">
-                      <i class="fa-solid fa-shirt"></i> Cloths Details
                     </a>
                   </li>
 
                   <li><hr class="dropdown-divider" /></li>
 
                   <li>
-                    <a class="dropdown-item logout" href="logout.html">
+                    <a class="dropdown-item logout" href="../index.html">
                       <i class="fa-solid fa-right-from-bracket"></i> Logout
                     </a>
                   </li>
@@ -696,21 +774,22 @@
       </nav>
     </header>
 
+    <!-- Main -->
     <section class="dashboard">
       <div class="container-fluid">
         <!-- Top bar  -->
         <div class="scan-hero mb-4">
-          <div>
+          <div class="scan-hero-text">
             <h3>RFID Scan Logs</h3>
             <p>Phase-wise tracking of all laundry orders</p>
           </div>
 
           <div class="scan-hero-meta">
-            <div>
+            <div class="meta-box">
               <span>Total Orders</span>
               <strong>128</strong>
             </div>
-            <div>
+            <div class="meta-box active">
               <span>Active Batches</span>
               <strong>6</strong>
             </div>
@@ -812,11 +891,11 @@
           <div class="col-lg-2 col-md-6">
             <h5 class="footer-title">Quick Links</h5>
             <ul class="footer-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="faq.html">FAQ</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../home/about.html">About Us</a></li>
+              <li><a href="../home/services.html">Services</a></li>
+              <li><a href="../home/faq.html">FAQ</a></li>
+              <li><a href="../home/contact.html">Contact</a></li>
             </ul>
           </div>
 
@@ -853,11 +932,11 @@
 
     <!-- Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/aos.js"></script>
-    <script src="../assets/js/loader.js"></script>
-    <script src="../assets/js/counter.js"></script>
-    <script src="../assets/js/hero-slider.js"></script>
-    <script src="../assets/js/main.js"></script>
+    <script src="../../assets/js/aos.js"></script>
+    <script src="../../assets/js/loader.js"></script>
+    <script src="../../assets/js/counter.js"></script>
+    <script src="../../assets/js/hero-slider.js"></script>
+    <script src="../../assets/js/main.js"></script>
 
     <script>
       AOS.init({

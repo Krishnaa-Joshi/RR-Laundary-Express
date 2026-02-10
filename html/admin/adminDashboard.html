@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>Laundry Express | Healthcare Laundry Solutions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="../assets/img/logos/RRLOGO.png" />
+    <link rel="icon" href="../../assets/img/logos/RRLOGO.png" />
 
     <!-- Bootstrap CSS (CDN) -->
     <link
@@ -13,11 +13,11 @@
     />
 
     <!-- AOS -->
-    <link rel="stylesheet" href="../assets/css/aos.css" />
+    <link rel="stylesheet" href="../../assets/css/aos.css" />
 
     <!-- Main CSS -->
     <!-- <link rel="stylesheet" href="../assets/css/main.css" /> -->
-    <!-- <link rel="stylesheet" href="../assets/css/ClientDashboard.css" /> -->
+    <!-- <link rel="stylesheet" href="../assets/css/adminDashboard.css" /> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -411,425 +411,360 @@
         font-weight: 700;
       }
 
-      /* Client DropDown */
-      .account-toggle {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-weight: 600;
-        color: #0f172a;
+      /* Admin DashBoard */
+      .admin-dashboard {
+        background: #f8fafc;
+        padding: 32px 0;
       }
 
-      .account-toggle i {
-        color: #22c55e;
-        font-size: 16px;
+      /* TOP stats  */
+      .admin-stat-card {
+        background: #ffffff;
+        padding: 26px;
+        border-radius: 22px;
+        box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
       }
-
-      .account-dropdown {
-        border-radius: 14px;
-        padding: 10px 0;
-        border: 1px solid rgba(15, 23, 42, 0.08);
-        box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
-        min-width: 220px;
-      }
-
-      .account-dropdown .dropdown-item {
-        display: flex;
-        align-items: center;
-        gap: 10px;
+      .admin-stat-card span {
         font-size: 14px;
-        font-weight: 500;
-        padding: 10px 16px;
-        color: #0f172a;
-      }
-
-      .account-dropdown .dropdown-item i {
-        width: 18px;
         color: #64748b;
       }
-
-      .account-dropdown .dropdown-item:hover {
-        background: #f1f5f9;
-        color: #0f172a;
+      .admin-stat-card h3 {
+        font-weight: 800;
+        margin-top: 8px;
+      }
+      .admin-stat-card.success h3 {
+        color: #16a34a;
       }
 
-      .account-dropdown .dropdown-item.logout {
-        color: #dc2626;
-        font-weight: 600;
-      }
-
-      .account-dropdown .dropdown-item.logout i {
-        color: #dc2626;
-      }
-
-      .dashboard-enhanced {
-        background: #f1f5f9;
-        padding: 32px;
-        min-height: 100vh;
-      }
-
-      /* Cloths Counts */
-      .stat-elevated {
-        background: #ffffff;
-        border-radius: 20px;
-        padding: 24px;
+      .admin-stat-card.enhanced {
+        background: linear-gradient(135deg, #ffffff, #f8fafc);
+        padding: 26px;
+        border-radius: 22px;
+        box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
         display: flex;
-        gap: 18px;
         align-items: center;
-        box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+        gap: 18px;
         transition: all 0.3s ease;
       }
 
-      .stat-elevated:hover {
+      .admin-stat-card.enhanced:hover {
         transform: translateY(-4px);
+        box-shadow: 0 26px 60px rgba(15, 23, 42, 0.12);
       }
 
       .stat-icon {
         width: 56px;
         height: 56px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        color: #ffffff;
+      }
+
+      .stat-icon.blue {
+        background: linear-gradient(135deg, #2563eb, #1e40af);
+      }
+
+      .stat-icon.purple {
+        background: linear-gradient(135deg, #7c3aed, #5b21b6);
+      }
+
+      .stat-icon.green {
+        background: linear-gradient(135deg, #22c55e, #15803d);
+      }
+
+      .stat-content span {
+        font-size: 14px;
+        color: #64748b;
+        display: block;
+      }
+
+      .stat-content h3 {
+        font-size: 28px;
+        font-weight: 800;
+        margin: 2px 0;
+        color: #0f172a;
+      }
+
+      .admin-stat-card.success h3 {
+        color: #15803d;
+      }
+
+      .stat-content small {
+        font-size: 12px;
+        color: #94a3b8;
+      }
+
+      /* Section style */
+      .section-block {
+        background: linear-gradient(180deg, #ffffff, #f9fafb);
+        padding: 28px 30px;
+        border-radius: 26px;
+        box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .section-header.enhanced {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .section-title {
+        font-weight: 800;
+        font-size: 18px;
+        color: #0f172a;
+        margin: 0;
+        letter-spacing: -0.2px;
+      }
+
+      .section-subtitle {
+        font-size: 13px;
+        color: #64748b;
+      }
+
+      /* Client details */
+      .client-status-card {
+        background: #f8fafc;
+        padding: 18px;
+        border-radius: 18px;
+      }
+      .client-status-card h6 {
+        font-weight: 700;
+      }
+      .status {
+        display: inline-block;
+        margin: 6px 0;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 700;
+      }
+      .status.pickup {
+        background: #eff6ff;
+        color: #2563eb;
+      }
+      .status.washing {
+        background: #ecfdf5;
+        color: #16a34a;
+      }
+      .status.dispatch {
+        background: #fff7ed;
+        color: #d97706;
+      }
+
+      .client-status-card.enhanced {
+        background: linear-gradient(135deg, #ffffff, #f8fafc);
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+        transition: all 0.3s ease;
+        height: 100%;
+      }
+
+      .client-status-card.enhanced:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 24px 55px rgba(15, 23, 42, 0.12);
+      }
+
+      .client-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 14px;
+      }
+
+      .client-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .client-info i {
+        color: #2563eb;
+        font-size: 18px;
+      }
+
+      .client-info h6 {
+        font-weight: 800;
+        margin: 0;
+        color: #0f172a;
+      }
+
+      .status {
+        padding: 6px 14px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      .status.pickup {
+        background: #eff6ff;
+        color: #2563eb;
+      }
+
+      .status.washing {
+        background: #ecfdf5;
+        color: #16a34a;
+      }
+
+      .status.dispatch {
+        background: #fff7ed;
+        color: #d97706;
+      }
+
+      .client-meta p {
+        font-size: 12px;
+        color: #64748b;
+        margin-bottom: 4px;
+      }
+
+      .client-meta strong {
+        font-size: 15px;
+        color: #0f172a;
+      }
+
+      /* Logs */
+      .log-card {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        background: linear-gradient(135deg, #f8fafc, #ffffff);
+        padding: 14px 18px;
+        border-radius: 18px;
+        margin-bottom: 12px;
+        font-size: 14px;
+        box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+        transition: all 0.25s ease;
+      }
+
+      .log-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.1);
+      }
+
+      .log-left {
+        width: 42px;
+        height: 42px;
         border-radius: 14px;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #fff;
-        font-size: 22px;
+        font-size: 16px;
+        color: #ffffff;
       }
 
-      .stat-icon.total {
-        background: linear-gradient(135deg, #1e3a8a, #2563eb);
-      }
-      .stat-icon.received {
-        background: linear-gradient(135deg, #22c55e, #16a34a);
-      }
-      .stat-icon.damaged {
-        background: linear-gradient(135deg, #f59e0b, #d97706);
-      }
-      .stat-icon.lost {
-        background: linear-gradient(135deg, #ef4444, #b91c1c);
-      }
-
-      /* Current Batch Status */
-      .section-block {
-        background: #ffffff;
-        border-radius: 22px;
-        padding: 26px;
-        box-shadow: 0 25px 60px rgba(15, 23, 42, 0.08);
-      }
-
-      .batch-header {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        margin-bottom: 20px;
-        padding-bottom: 14px;
-        border-bottom: 1px solid #e5e7eb;
-      }
-
-      .batch-title {
-        display: flex;
-        align-items: baseline;
-        gap: 12px;
-      }
-
-      .batch-title h5 {
-        margin: 0;
-        font-weight: 800;
-        color: #0f172a;
-      }
-
-      .batch-meta {
-        font-size: 14px;
-        color: #64748b;
-      }
-
-      .phase-tracker {
-        display: flex;
-        justify-content: space-between;
-        gap: 16px;
-        margin-top: 10px;
-      }
-
-      .phase {
+      .log-body {
         flex: 1;
-        background: #f8fafc;
-        border-radius: 16px;
-        padding: 18px 14px;
-        text-align: center;
-        border: 2px solid transparent;
       }
 
-      .phase-name {
+      .log-body strong {
         display: block;
-        margin-top: 6px;
-        font-size: 15px;
-        font-weight: 600;
-        color: #0f172a;
-      }
-
-      .phase-icon {
-        font-size: 22px;
-      }
-
-      .phase.completed {
-        background: #ecfdf5;
-        border-color: #22c55e;
-      }
-
-      .phase.completed .phase-icon {
-        color: #22c55e;
-      }
-
-      .phase.active {
-        background: linear-gradient(135deg, #1e3a8a, #2563eb);
-        color: #ffffff;
-        border-color: #1e3a8a;
-      }
-
-      .phase.active .phase-name {
-        color: #ffffff;
-      }
-
-      .phase.upcoming {
-        background: #f1f5f9;
-        opacity: 0.7;
-      }
-
-      .phase-meta {
-        margin-top: 18px;
-        padding: 14px;
-        background: #f8fafc;
-        border-radius: 14px;
-        font-size: 14px;
-        color: #475569;
-      }
-
-      /* Scan Logs */
-      .scan-section {
-        padding: 28px;
-      }
-
-      .scan-header {
-        display: flex;
-        align-items: baseline;
-        gap: 12px;
-        margin-bottom: 22px;
-      }
-
-      .scan-header h5 {
         font-weight: 800;
         color: #0f172a;
-        margin: 0;
       }
 
-      .scan-subtitle {
-        font-size: 14px;
+      .log-body p {
+        margin: 0;
+        font-size: 13px;
         color: #64748b;
       }
 
-      .scan-timeline {
-        position: relative;
-        padding-left: 34px;
+      .log-time {
+        font-size: 12px;
+        color: #64748b;
+        white-space: nowrap;
       }
 
-      .scan-timeline::before {
-        content: "";
-        position: absolute;
-        left: 10px;
-        top: 0;
-        bottom: 0;
-        width: 2px;
-        background: linear-gradient(to bottom, #22c55e, #e5e7eb);
+      .log-card.scan {
+        border-left: 4px solid #2563eb;
       }
 
-      .scan-item {
-        position: relative;
-        display: flex;
-        gap: 18px;
-        margin-bottom: 28px;
-      }
-
-      .scan-item:last-child {
-        margin-bottom: 0;
-      }
-
-      .scan-dot {
-        width: 14px;
-        height: 14px;
-        border-radius: 50%;
-        margin-top: 10px;
-        z-index: 2;
-      }
-
-      .scan-dot.pickup {
+      .log-card.scan .log-left {
         background: #2563eb;
       }
-      .scan-dot.washing {
-        background: #22c55e;
+
+      .log-card.delivery.pickup {
+        border-left: 4px solid #2563eb;
       }
-      .scan-dot.dispatch {
-        background: #f59e0b;
+
+      .log-card.delivery.pickup .log-left {
+        background: #2563eb;
       }
-      .scan-dot.delivered {
+
+      .log-card.delivery.delivered {
+        border-left: 4px solid #16a34a;
+      }
+
+      .log-card.delivery.delivered .log-left {
         background: #16a34a;
       }
 
-      .scan-content {
-        background: #f8fafc;
-        padding: 16px 20px;
-        border-radius: 16px;
-        width: 100%;
-        box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
-        transition:
-          transform 0.25s ease,
-          box-shadow 0.25s ease;
+      /* Missing rfid */
+      .missing-section {
+        background: linear-gradient(135deg, #fff7ed, #fffbf5);
+        border-radius: 26px;
       }
 
-      .scan-content:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+      .missing-card.enhanced {
+        background: #ffffff;
+        padding: 18px 20px;
+        border-radius: 18px;
+        margin-bottom: 14px;
+        border-left: 6px solid #f59e0b;
+        box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
       }
 
-      .scan-content h6 {
-        font-weight: 700;
-        margin-bottom: 4px;
-        color: #0f172a;
-      }
-
-      .scan-content p {
-        font-size: 14px;
-        color: #475569;
-        margin: 0;
-      }
-
-      .scan-time {
-        font-size: 13px;
-        color: #64748b;
-        display: block;
-        margin-bottom: 6px;
-      }
-
-      .scan-item.completed .scan-content {
-        opacity: 0.9;
-      }
-
-      .scan-item.latest .scan-content {
-        background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
-        border-left: 5px solid #22c55e;
-      }
-
-      .scan-item.latest h6 {
-        color: #166534;
-      }
-
-      .scan-item.latest .scan-dot {
-        box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.15);
-      }
-
-      /* Order History */
-      .orders-header {
-        margin-bottom: 22px;
-      }
-
-      .orders-header h5 {
-        margin: 0;
-        font-weight: 800;
-        font-size: 18px;
-        color: #0f172a;
-      }
-
-      .orders-subtitle {
-        margin: 4px 0 0;
-        font-size: 14px;
-        color: #64748b;
-      }
-
-      .order-card {
-        background: linear-gradient(135deg, #f8fafc, #ffffff);
-        padding: 22px;
-        border-radius: 20px;
-        box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
-        border: 1px solid rgba(15, 23, 42, 0.05);
-        height: 100%;
-        transition:
-          transform 0.25s ease,
-          box-shadow 0.25s ease;
-      }
-
-      .order-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 26px 60px rgba(15, 23, 42, 0.12);
-      }
-
-      .order-header {
+      .missing-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 16px;
+        margin-bottom: 10px;
       }
 
-      .order-header h6 {
-        font-weight: 800;
+      .missing-hospital {
+        display: flex;
+        align-items: center;
+        gap: 10px;
         color: #0f172a;
-        margin: 0;
       }
 
-      .order-status {
+      .missing-hospital i {
+        color: #f59e0b;
+        font-size: 16px;
+      }
+
+      .missing-count {
+        background: #fff7ed;
+        color: #92400e;
         font-size: 12px;
         font-weight: 700;
         padding: 6px 12px;
         border-radius: 999px;
       }
 
-      .order-status.completed {
-        background: #ecfdf5;
-        color: #166534;
-      }
-
-      .order-body {
+      .missing-tags {
         display: flex;
-        justify-content: space-between;
-        gap: 14px;
-        margin-bottom: 18px;
+        flex-wrap: wrap;
+        gap: 8px;
       }
 
-      .order-metric {
-        background: #f1f5f9;
-        padding: 14px;
-        border-radius: 14px;
-        width: 100%;
-        text-align: center;
-      }
-
-      .order-metric span {
-        display: block;
+      .tag-chip {
+        background: #fff7ed;
+        border: 1px solid #f59e0b;
+        color: #92400e;
         font-size: 13px;
-        color: #64748b;
-        margin-bottom: 4px;
-      }
-
-      .order-metric strong {
-        font-size: 18px;
-        font-weight: 800;
-        color: #0f172a;
-      }
-
-      .order-footer {
-        text-align: right;
-      }
-
-      .order-link {
-        font-size: 13.5px;
-        font-weight: 600;
-        color: #2563eb;
-        text-decoration: none;
-      }
-
-      .order-link:hover {
-        text-decoration: underline;
+        font-weight: 700;
+        padding: 4px 10px;
+        border-radius: 999px;
       }
     </style>
   </head>
-
   <body>
     <!-- Loader -->
     <div id="loader">
@@ -856,7 +791,7 @@
         <div class="top-right">
           <div class="welcome-user">
             <i class="fa-solid fa-hospital"></i>
-            <span>Welcome, <strong>XX Hospital</strong></span>
+            <span>Welcome, <strong>XX Admin</strong></span>
           </div>
         </div>
       </div>
@@ -866,9 +801,9 @@
     <header class="main-header">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <a class="navbar-brand d-flex align-items-center" href="../index.html">
             <img
-              src="../assets/img/logos/RRLOGO.png"
+              src="../../assets/img/logos/RRLOGO.png"
               alt="Laundry Express"
               class="navbar-logo"
             />
@@ -894,24 +829,17 @@
                 <i class="fa-solid fa-clock"></i>
                 <span>Mon – Sat, 9:00 AM – 7:00 PM</span>
               </div>
-
-              <div class="mobile-top-item">
-                <a href="Login.html" class="mobile-top-link">Sign In</a>
-              </div>
             </div>
 
             <ul class="navbar-nav ms-auto align-items-lg-center">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="#">Orders</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
+                <a class="nav-link" href="#">All Scans</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="services.html">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="faq.html">FAQ</a>
+                <a class="nav-link" href="#">Cloths Details</a>
               </li>
               <li class="nav-item dropdown ms-lg-3">
                 <a
@@ -922,37 +850,20 @@
                   aria-expanded="false"
                 >
                   <i class="fa-solid fa-hospital"></i>
-                  <span class="d-none d-lg-inline">XX Hospital</span>
+                  <span class="d-none d-lg-inline">Admin</span>
                 </a>
 
                 <ul class="dropdown-menu dropdown-menu-end account-dropdown">
                   <li>
-                    <a class="dropdown-item" href="account.html">
+                    <a class="dropdown-item" href="./adminDashboard.html">
                       <i class="fa-solid fa-user"></i> My Account
-                    </a>
-                  </li>
-
-                  <li>
-                    <a class="dropdown-item" href="orders.html">
-                      <i class="fa-solid fa-box"></i> Orders
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="scans.html">
-                      <i class="fa-solid fa-barcode"></i> All Scans
-                    </a>
-                  </li>
-
-                  <li>
-                    <a class="dropdown-item" href="cloths.html">
-                      <i class="fa-solid fa-shirt"></i> Cloths Details
                     </a>
                   </li>
 
                   <li><hr class="dropdown-divider" /></li>
 
                   <li>
-                    <a class="dropdown-item logout" href="logout.html">
+                    <a class="dropdown-item logout" href="../index.html">
                       <i class="fa-solid fa-right-from-bracket"></i> Logout
                     </a>
                   </li>
@@ -964,208 +875,207 @@
       </nav>
     </header>
 
-    <!-- Main Content -->
-    <section class="dashboard dashboard-enhanced">
-      
+    <!-- Admin Dashboard -->
+    <section class="admin-dashboard">
       <div class="container-fluid">
-        <!-- Cloth Count -->
+        <!-- stats -->
         <div class="row g-4 mb-4">
-          <div class="col-xl-3 col-md-6">
-            <div class="stat-card stat-elevated">
-              <div class="stat-icon total">
-                <i class="fa-solid fa-layer-group"></i>
+          <div class="col-lg-4">
+            <div class="admin-stat-card enhanced">
+              <div class="stat-icon blue">
+                <i class="fa-solid fa-hospital"></i>
               </div>
-              <div>
-                <h6>Total Linen</h6>
-                <h3>12,480</h3>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-md-6">
-            <div class="stat-card stat-elevated">
-              <div class="stat-icon received">
-                <i class="fa-solid fa-box"></i>
-              </div>
-              <div>
-                <h6>Received</h6>
-                <h3>11,930</h3>
+              <div class="stat-content">
+                <span>Total Clients</span>
+                <h3>18</h3>
+                <small>Active Hospitals</small>
               </div>
             </div>
           </div>
 
-          <div class="col-xl-3 col-md-6">
-            <div class="stat-card stat-elevated">
-              <div class="stat-icon damaged">
-                <i class="fa-solid fa-triangle-exclamation"></i>
+          <div class="col-lg-4">
+            <div class="admin-stat-card enhanced">
+              <div class="stat-icon purple">
+                <i class="fa-solid fa-barcode"></i>
               </div>
-              <div>
-                <h6>Damaged</h6>
-                <h3>210</h3>
+              <div class="stat-content">
+                <span>Total RFID Allocated</span>
+                <h3>58,420</h3>
+                <small>Across all clients</small>
               </div>
             </div>
           </div>
 
-          <div class="col-xl-3 col-md-6">
-            <div class="stat-card stat-elevated">
-              <div class="stat-icon lost">
-                <i class="fa-solid fa-xmark-circle"></i>
+          <div class="col-lg-4">
+            <div class="admin-stat-card enhanced success">
+              <div class="stat-icon green">
+                <i class="fa-solid fa-indian-rupee-sign"></i>
               </div>
-              <div>
-                <h6>Lost</h6>
-                <h3>340</h3>
+              <div class="stat-content">
+                <span>Total Payment Received</span>
+                <h3>₹12.6 L</h3>
+                <small>This month</small>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Batch Status -->
+        <!-- Client Details -->
         <div class="section-block mb-4">
-          <div class="batch-header">
-            <div class="batch-title">
-              <h5>Current Batch Status</h5>
-              <span class="batch-meta">Order #LX1023 • 1,000 Items</span>
-            </div>
+          <div class="section-header enhanced">
+            <h5 class="section-title">Client Status</h5>
+            <span class="section-subtitle">Live batch monitoring</span>
           </div>
-
-          <div class="phase-tracker">
-            <div class="phase completed">
-              <span class="phase-icon">✔</span>
-              <span class="phase-name">Pickup</span>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="client-status-card enhanced">
+                <div class="client-header">
+                  <div class="client-info">
+                    <i class="fa-solid fa-hospital"></i>
+                    <h6>City Hospital</h6>
+                  </div>
+                  <span class="status washing">Washing</span>
+                </div>
+                <div class="client-meta">
+                  <p>RFID Range</p>
+                  <strong>RX0100 – RX0250</strong>
+                </div>
+              </div>
             </div>
 
-            <div class="phase active">
-              <span class="phase-icon">⟳</span>
-              <span class="phase-name">Washing</span>
+            <div class="col-md-4">
+              <div class="client-status-card enhanced">
+                <div class="client-header">
+                  <div class="client-info">
+                    <i class="fa-solid fa-hospital"></i>
+                    <h6>Care Hospital</h6>
+                  </div>
+                  <span class="status dispatch">Dispatch</span>
+                </div>
+                <div class="client-meta">
+                  <p>RFID Range</p>
+                  <strong>RX0300 – RX0450</strong>
+                </div>
+              </div>
             </div>
 
-            <div class="phase upcoming">
-              <span class="phase-icon">⏳</span>
-              <span class="phase-name">Dispatch</span>
+            <div class="col-md-4">
+              <div class="client-status-card enhanced">
+                <div class="client-header">
+                  <div class="client-info">
+                    <i class="fa-solid fa-hospital"></i>
+                    <h6>Metro Hospital</h6>
+                  </div>
+                  <span class="status pickup">Pickup</span>
+                </div>
+                <div class="client-meta">
+                  <p>RFID Range</p>
+                  <strong>RX0500 – RX0700</strong>
+                </div>
+              </div>
             </div>
-
-            <div class="phase upcoming">
-              <span class="phase-icon">⏳</span>
-              <span class="phase-name">Delivered</span>
-            </div>
-          </div>
-
-          <div class="phase-meta">
-            <p>
-              <strong>Current Phase:</strong> Washing<br />
-              <strong>Total Linen in Batch:</strong> 1,000 Items
-            </p>
           </div>
         </div>
 
         <div class="row g-4 mb-4">
+          <!-- Scan Logs -->
           <div class="col-lg-6">
-            <!-- Scan Logs -->
-            <div class="section-block scan-section">
-              <div class="scan-header">
-                <h5>Recent Scan Logs</h5>
-                <span class="scan-subtitle">Last 24 Hours</span>
+            <div class="section-block">
+              <div class="section-header enhanced">
+                <h5 class="section-title">Scan Logs</h5>
+                <span class="section-subtitle">RFID activity</span>
               </div>
 
-              <div class="scan-timeline">
-                <div class="scan-item active latest">
-                  <div class="scan-dot delivered"></div>
-                  <div class="scan-content">
-                    <span class="scan-time">01:10 PM</span>
-                    <h6>Delivered (Final Scan)</h6>
-                    <p>390 Items • Scanned by Rahul</p>
-                  </div>
+              <div class="log-card scan">
+                <div class="log-left">
+                  <i class="fa-solid fa-barcode"></i>
                 </div>
+                <div class="log-body">
+                  <strong>City Hospital</strong>
+                  <p>320 RFID • Washing</p>
+                </div>
+                <div class="log-time">11:20 AM</div>
+              </div>
 
-                <div class="scan-item completed">
-                  <div class="scan-dot dispatch"></div>
-                  <div class="scan-content">
-                    <span class="scan-time">12:05 PM</span>
-                    <h6>Dispatch Completed</h6>
-                    <p>280 Items • Scanned by Suresh</p>
-                  </div>
+              <div class="log-card scan">
+                <div class="log-left">
+                  <i class="fa-solid fa-barcode"></i>
                 </div>
-
-                <div class="scan-item completed">
-                  <div class="scan-dot washing"></div>
-                  <div class="scan-content">
-                    <span class="scan-time">11:20 AM</span>
-                    <h6>Washing Completed</h6>
-                    <p>450 Items • Scanned by Anil</p>
-                  </div>
+                <div class="log-body">
+                  <strong>Care Hospital</strong>
+                  <p>280 RFID • Dispatch</p>
                 </div>
-
-                <div class="scan-item completed">
-                  <div class="scan-dot pickup"></div>
-                  <div class="scan-content">
-                    <span class="scan-time">10:42 AM</span>
-                    <h6>Pickup Completed</h6>
-                    <p>320 Items • Scanned by Ravi</p>
-                  </div>
-                </div>
+                <div class="log-time">12:10 PM</div>
               </div>
             </div>
           </div>
 
-          <!-- Order History -->
+          <!-- Delivery Logs -->
           <div class="col-lg-6">
-            <div class="section-block h-100">
-              <div class="orders-header">
-                <h5>Recent Orders</h5>
-                <p class="orders-subtitle">Previous Orders</p>
+            <div class="section-block">
+              <div class="section-header enhanced">
+                <h5 class="section-title">Delivery Logs</h5>
+                <span class="section-subtitle">Pickup & delivery</span>
               </div>
 
-              <div class="row g-3">
-                <div class="col-md-12">
-                  <div class="order-card">
-                    <div class="order-header">
-                      <h6>Order #LX1023</h6>
-                      <span class="order-status completed">Completed</span>
-                    </div>
-
-                    <div class="order-body">
-                      <div class="order-metric">
-                        <span>Total Linen</span>
-                        <strong>1,250</strong>
-                      </div>
-
-                      <div class="order-metric">
-                        <span>Bill Amount</span>
-                        <strong>₹18,500</strong>
-                      </div>
-                    </div>
-
-                    <div class="order-footer">
-                      <a href="#" class="order-link">View Details →</a>
-                    </div>
-                  </div>
+              <div class="log-card delivery pickup">
+                <div class="log-left">
+                  <i class="fa-solid fa-arrow-up"></i>
                 </div>
-
-                <div class="col-md-12">
-                  <div class="order-card">
-                    <div class="order-header">
-                      <h6>Order #LX1022</h6>
-                      <span class="order-status completed">Completed</span>
-                    </div>
-
-                    <div class="order-body">
-                      <div class="order-metric">
-                        <span>Total Linen</span>
-                        <strong>980</strong>
-                      </div>
-
-                      <div class="order-metric">
-                        <span>Bill Amount</span>
-                        <strong>₹14,200</strong>
-                      </div>
-                    </div>
-
-                    <div class="order-footer">
-                      <a href="#" class="order-link">View Details →</a>
-                    </div>
-                  </div>
+                <div class="log-body">
+                  <strong>Pickup</strong>
+                  <p>City Hospital • 320 RFID</p>
                 </div>
+                <div class="log-time">10:15 AM</div>
               </div>
+
+              <div class="log-card delivery delivered">
+                <div class="log-left">
+                  <i class="fa-solid fa-arrow-down"></i>
+                </div>
+                <div class="log-body">
+                  <strong>Delivered</strong>
+                  <p>Care Hospital • 300 RFID</p>
+                </div>
+                <div class="log-time">01:45 PM</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Missing Rfid -->
+        <div class="section-block missing-section">
+          <div class="section-header enhanced">
+            <h5 class="section-title">Missing RFIDs</h5>
+            <span class="section-subtitle">Immediate attention required</span>
+          </div>
+
+          <div class="missing-card enhanced">
+            <div class="missing-header">
+              <div class="missing-hospital">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <strong>City Hospital</strong>
+              </div>
+              <span class="missing-count">2 Missing</span>
+            </div>
+
+            <div class="missing-tags">
+              <span class="tag-chip">RX0211</span>
+              <span class="tag-chip">RX0219</span>
+            </div>
+          </div>
+
+          <div class="missing-card enhanced">
+            <div class="missing-header">
+              <div class="missing-hospital">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <strong>Care Hospital</strong>
+              </div>
+              <span class="missing-count">1 Missing</span>
+            </div>
+
+            <div class="missing-tags">
+              <span class="tag-chip">RX0332</span>
             </div>
           </div>
         </div>
@@ -1191,11 +1101,11 @@
           <div class="col-lg-2 col-md-6">
             <h5 class="footer-title">Quick Links</h5>
             <ul class="footer-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="faq.html">FAQ</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../home/about.html">About Us</a></li>
+              <li><a href="../home/services.html">Services</a></li>
+              <li><a href="../home/faq.html">FAQ</a></li>
+              <li><a href="../home/contact.html">Contact</a></li>
             </ul>
           </div>
 
@@ -1232,11 +1142,11 @@
 
     <!-- Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/aos.js"></script>
-    <script src="../assets/js/loader.js"></script>
-    <script src="../assets/js/counter.js"></script>
-    <script src="../assets/js/hero-slider.js"></script>
-    <script src="../assets/js/main.js"></script>
+    <script src="../../assets/js/aos.js"></script>
+    <script src="../../assets/js/loader.js"></script>
+    <script src="../../assets/js/counter.js"></script>
+    <script src="../../assets/js/hero-slider.js"></script>
+    <script src="../../assets/js/main.js"></script>
 
     <script>
       AOS.init({

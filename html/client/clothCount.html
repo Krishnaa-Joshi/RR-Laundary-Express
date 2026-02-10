@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>Laundry Express | Healthcare Laundry Solutions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="../assets/img/logos/RRLOGO.png" />
+    <link rel="icon" href="../../assets/img/logos/RRLOGO.png" />
 
     <!-- Bootstrap CSS (CDN) -->
     <link
@@ -13,7 +13,7 @@
     />
 
     <!-- AOS -->
-    <link rel="stylesheet" href="../assets/css/aos.css" />
+    <link rel="stylesheet" href="../../assets/css/aos.css" />
 
     <!-- Main CSS -->
     <!-- <link rel="stylesheet" href="../assets/css/main.css" /> -->
@@ -391,21 +391,99 @@
         }
       }
 
+      /* Welcome User */
+      .welcome-user {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        color: #ffffff;
+        font-weight: 500;
+        opacity: 0.95;
+      }
+
+      .welcome-user i {
+        font-size: 15px;
+        color: #22c55e;
+      }
+
+      .welcome-user strong {
+        font-weight: 700;
+      }
+
+      /* Client DropDown */
+      .account-toggle {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 600;
+        color: #0f172a;
+      }
+
+      .account-toggle i {
+        color: #22c55e;
+        font-size: 16px;
+      }
+
+      .account-dropdown {
+        border-radius: 14px;
+        padding: 10px 0;
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+        min-width: 220px;
+      }
+
+      .account-dropdown .dropdown-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 10px 16px;
+        color: #0f172a;
+      }
+
+      .account-dropdown .dropdown-item i {
+        width: 18px;
+        color: #64748b;
+      }
+
+      .account-dropdown .dropdown-item:hover {
+        background: #f1f5f9;
+        color: #0f172a;
+      }
+
+      .account-dropdown .dropdown-item.logout {
+        color: #dc2626;
+        font-weight: 600;
+      }
+
+      .account-dropdown .dropdown-item.logout i {
+        color: #dc2626;
+      }
+
       /* Cloth Count Page  */
+      .cloth-dashboard {
+        background: #f1f5f9;
+        padding: 28px;
+        min-height: 80vh;
+      }
+
       /* Hero Bar  */
       .cloth-hero {
         display: flex;
         justify-content: space-between;
         align-items: center;
         background: linear-gradient(135deg, #0f172a, #1e3a8a);
-        padding: 30px 34px;
-        border-radius: 24px;
+        padding: 32px 36px;
+        border-radius: 26px;
         color: #ffffff;
+        box-shadow: 0 30px 70px rgba(15, 23, 42, 0.35);
       }
 
       .cloth-hero h3 {
-        font-weight: 800;
-        margin-bottom: 4px;
+        font-weight: 900;
+        margin-bottom: 6px;
       }
 
       .cloth-hero p {
@@ -416,42 +494,75 @@
 
       .cloth-hero-meta {
         display: flex;
-        gap: 28px;
+        gap: 20px;
       }
 
-      .cloth-hero-meta span {
-        font-size: 13px;
+      .meta-box {
+        background: rgba(255, 255, 255, 0.12);
+        padding: 14px 18px;
+        border-radius: 16px;
+        text-align: center;
+        backdrop-filter: blur(8px);
+      }
+
+      .meta-box.warning {
+        background: rgba(245, 158, 11, 0.18);
+      }
+
+      .meta-box span {
+        font-size: 12px;
         opacity: 0.85;
       }
 
-      .cloth-hero-meta strong {
+      .meta-box strong {
         display: block;
         font-size: 22px;
-        font-weight: 800;
+        font-weight: 900;
       }
 
-      /* cloths Count */
       .cloth-card {
+        position: relative;
         background: linear-gradient(135deg, #ffffff, #f8fafc);
-        border-radius: 22px;
+        border-radius: 24px;
         padding: 26px;
         box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
         height: 100%;
-        transition:
-          transform 0.25s ease,
-          box-shadow 0.25s ease;
+        overflow: hidden;
+        transition: all 0.25s ease;
+      }
+
+      .cloth-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 6px;
+        width: 100%;
+      }
+
+      .cloth-card.total::before {
+        background: #2563eb;
+      }
+      .cloth-card.received::before {
+        background: #22c55e;
+      }
+      .cloth-card.damaged::before {
+        background: #f59e0b;
+      }
+      .cloth-card.lost::before {
+        background: #dc2626;
       }
 
       .cloth-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 28px 65px rgba(15, 23, 42, 0.12);
+        transform: translateY(-5px);
+        box-shadow: 0 30px 70px rgba(15, 23, 42, 0.12);
       }
 
       .cloth-card-header {
         display: flex;
         align-items: center;
-        gap: 12px;
-        margin-bottom: 14px;
+        gap: 14px;
+        margin-bottom: 16px;
       }
 
       .cloth-card-header h5 {
@@ -461,29 +572,30 @@
       }
 
       .cloth-card-header i {
-        font-size: 20px;
+        font-size: 22px;
       }
 
       .cloth-range,
       .cloth-list {
         font-size: 14px;
         color: #475569;
-        margin-bottom: 16px;
+        margin-bottom: 18px;
       }
 
       .cloth-list span {
         display: inline-block;
         background: #f1f5f9;
-        padding: 6px 10px;
-        border-radius: 10px;
-        margin: 4px 4px 0 0;
-        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 999px;
+        margin: 6px 6px 0 0;
+        font-weight: 700;
         font-size: 13px;
+        border: 1px solid rgba(15, 23, 42, 0.08);
       }
 
       .cloth-count {
-        font-size: 18px;
-        font-weight: 800;
+        font-size: 20px;
+        font-weight: 900;
         color: #0f172a;
       }
 
@@ -500,11 +612,41 @@
         color: #dc2626;
       }
 
+      @media (max-width: 992px) {
+        .cloth-dashboard {
+          padding: 20px;
+        }
+      }
+
       @media (max-width: 768px) {
         .cloth-hero {
           flex-direction: column;
           align-items: flex-start;
-          gap: 16px;
+          gap: 18px;
+          padding: 24px;
+        }
+
+        .cloth-hero-meta {
+          width: 100%;
+          justify-content: space-between;
+        }
+
+        .meta-box {
+          width: 100%;
+        }
+
+        .cloth-count {
+          font-size: 18px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .cloth-card {
+          padding: 20px;
+        }
+
+        .cloth-card-header h5 {
+          font-size: 16px;
         }
       }
     </style>
@@ -546,9 +688,12 @@
     <header class="main-header">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <a
+            class="navbar-brand d-flex align-items-center"
+            href="../index.html"
+          >
             <img
-              src="../assets/img/logos/RRLOGO.png"
+              src="../../assets/img/logos/RRLOGO.png"
               alt="Laundry Express"
               class="navbar-logo"
             />
@@ -574,24 +719,19 @@
                 <i class="fa-solid fa-clock"></i>
                 <span>Mon – Sat, 9:00 AM – 7:00 PM</span>
               </div>
-
-              <div class="mobile-top-item">
-                <a href="Login.html" class="mobile-top-link">Sign In</a>
-              </div>
             </div>
 
             <ul class="navbar-nav ms-auto align-items-lg-center">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="../client/clothCount.html"
+                  >RFID Details</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
+                <a class="nav-link" href="../client/orders.html">Orders</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="services.html">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="faq.html">FAQ</a>
+                <a class="nav-link" href="../client/scanLogs.html">Scan Logs</a>
               </li>
               <li class="nav-item dropdown ms-lg-3">
                 <a
@@ -607,39 +747,15 @@
 
                 <ul class="dropdown-menu dropdown-menu-end account-dropdown">
                   <li>
-                    <a class="dropdown-item" href="account.html">
+                    <a class="dropdown-item" href="./clientDashborad.html">
                       <i class="fa-solid fa-user"></i> My Account
-                    </a>
-                  </li>
-
-                  <li>
-                    <a class="dropdown-item" href="orders.html">
-                      <i class="fa-solid fa-box"></i> Orders
-                    </a>
-                  </li>
-
-                  <li>
-                    <a class="dropdown-item" href="transactions.html">
-                      <i class="fa-solid fa-receipt"></i> Transactions
-                    </a>
-                  </li>
-
-                  <li>
-                    <a class="dropdown-item" href="scans.html">
-                      <i class="fa-solid fa-barcode"></i> All Scans
-                    </a>
-                  </li>
-
-                  <li>
-                    <a class="dropdown-item" href="cloths.html">
-                      <i class="fa-solid fa-shirt"></i> Cloths Details
                     </a>
                   </li>
 
                   <li><hr class="dropdown-divider" /></li>
 
                   <li>
-                    <a class="dropdown-item logout" href="logout.html">
+                    <a class="dropdown-item logout" href="../index.html">
                       <i class="fa-solid fa-right-from-bracket"></i> Logout
                     </a>
                   </li>
@@ -651,21 +767,22 @@
       </nav>
     </header>
 
-    <section class="dashboard">
+    <!-- Main -->
+    <section class="dashboard cloth-dashboard">
       <div class="container-fluid">
         <!-- Hero Bar -->
         <div class="cloth-hero mb-4">
-          <div>
+          <div class="cloth-hero-text">
             <h3>Cloth Count & RFID Audit</h3>
             <p>Complete linen accountability by RFID tag number</p>
           </div>
 
           <div class="cloth-hero-meta">
-            <div>
+            <div class="meta-box">
               <span>Total Linen</span>
               <strong>1,000</strong>
             </div>
-            <div>
+            <div class="meta-box warning">
               <span>Discrepancies</span>
               <strong>28</strong>
             </div>
@@ -682,7 +799,7 @@
               </div>
 
               <p class="cloth-range">
-                RFID Tags: <strong>RX0001</strong> to <strong>RX1000</strong>
+                RFID Tags: <strong>RX0001</strong> – <strong>RX1000</strong>
               </p>
 
               <span class="cloth-count">1,000 Items</span>
@@ -697,7 +814,7 @@
               </div>
 
               <p class="cloth-range">
-                RFID Tags: <strong>RX0001</strong> to <strong>RX0972</strong>
+                RFID Tags: <strong>RX0001</strong> – <strong>RX0972</strong>
               </p>
 
               <span class="cloth-count">972 Items</span>
@@ -713,8 +830,8 @@
 
               <p class="cloth-list">
                 RFID Tags:
-                <span>RX0142</span>, <span>RX0298</span>, <span>RX0451</span>,
-                <span>RX0630</span>
+                <span>RX0142</span><span>RX0298</span> <span>RX0451</span
+                ><span>RX0630</span>
               </p>
 
               <span class="cloth-count">4 Items</span>
@@ -730,8 +847,7 @@
 
               <p class="cloth-list">
                 RFID Tags:
-                <span>RX0721</span>, <span>RX0819</span>,
-                <span>RX0924</span>
+                <span>RX0721</span><span>RX0819</span><span>RX0924</span>
               </p>
 
               <span class="cloth-count">3 Items</span>
@@ -760,11 +876,11 @@
           <div class="col-lg-2 col-md-6">
             <h5 class="footer-title">Quick Links</h5>
             <ul class="footer-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="faq.html">FAQ</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../home/about.html">About Us</a></li>
+              <li><a href="../home/services.html">Services</a></li>
+              <li><a href="../home/faq.html">FAQ</a></li>
+              <li><a href="../home/contact.html">Contact</a></li>
             </ul>
           </div>
 
@@ -801,11 +917,11 @@
 
     <!-- Javasript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/aos.js"></script>
-    <script src="../assets/js/loader.js"></script>
-    <script src="../assets/js/counter.js"></script>
-    <script src="../assets/js/hero-slider.js"></script>
-    <script src="../assets/js/main.js"></script>
+    <script src="../../assets/js/aos.js"></script>
+    <script src="../../assets/js/loader.js"></script>
+    <script src="../../assets/js/counter.js"></script>
+    <script src="../../assets/js/hero-slider.js"></script>
+    <script src="../../assets/js/main.js"></script>
 
     <script>
       AOS.init({

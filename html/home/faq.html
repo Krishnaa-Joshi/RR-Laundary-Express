@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>Laundry Express | Healthcare Laundry Solutions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="../assets/img/logos/RRLOGO.png" />
+    <link rel="icon" href="../../assets/img/logos/RRLOGO.png" />
 
     <!-- Bootstrap CSS (CDN) -->
     <link
@@ -13,10 +13,11 @@
     />
 
     <!-- AOS -->
-    <link rel="stylesheet" href="../assets/css/aos.css" />
+    <link rel="stylesheet" href="../../assets/css/aos.css" />
 
     <!-- Main CSS -->
-    <!-- <link rel="stylesheet" href="../assets/css/main.css" /> -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/faq.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -24,6 +25,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <style>
       html {
         scroll-behavior: smooth;
@@ -71,7 +73,7 @@
         scroll-margin-top: 100px;
       }
 
-      /* Loader  */
+      /* Loader */
       #loader {
         position: fixed;
         inset: 0;
@@ -96,6 +98,7 @@
           transform: rotate(360deg);
         }
       }
+
 
       /* Top Bar */
       .top-bar {
@@ -240,7 +243,6 @@
         }
       }
 
-      /* Mobile Top bar  */
       .mobile-top-bar {
         display: none;
         padding: 14px 0;
@@ -350,6 +352,7 @@
         transition: all 0.35s ease;
       }
 
+      /* Hover effect */
       .btn-secondary-hero:hover {
         background: rgba(34, 197, 94, 0.18);
         border-color: #22c55e;
@@ -367,9 +370,9 @@
         background-repeat: no-repeat;
       }
 
-      .service-hero-bg {
+      .faq-hero-bg {
         min-height: 85vh;
-        background-image: url("../assets/img/hero/63f54924fc7ef34ed0b4462c04e3a768.jpg");
+        background-image: url("../../assets/img/hero/faq.jpg");
       }
 
       .hero-bg .container {
@@ -377,74 +380,7 @@
         z-index: 2;
       }
 
-      /* Stats */
-      .stats {
-        padding: 120px 0;
-        background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-      }
-
-      .stats h2 {
-        font-size: 40px;
-        font-weight: 800;
-      }
-
-      .stats p {
-        margin-top: 10px;
-        font-weight: 600;
-        color: #374151;
-      }
-
-      .stat-card {
-        background: #ffffff;
-        border-radius: 20px;
-        padding: 40px 20px;
-        height: 100%;
-        box-shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
-        transition: all 0.4s ease;
-      }
-
-      .stat-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 30px 70px rgba(15, 23, 42, 0.15);
-      }
-
-      .stat-icon {
-        font-size: 36px;
-        margin-bottom: 16px;
-      }
-
-      .stat-card h2 {
-        font-size: 48px;
-        font-weight: 800;
-        margin-bottom: 10px;
-        background: linear-gradient(90deg, #1e3a8a, #22c55e);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
-      .stat-card p {
-        font-size: 15px;
-        font-weight: 600;
-        color: #475569;
-      }
-
-      @media (max-width: 768px) {
-        .stats-enhanced {
-          padding: 80px 0;
-        }
-
-        .stat-card h2 {
-          font-size: 40px;
-        }
-      }
-
-      .counter {
-        font-size: 40px;
-        font-weight: 800;
-        color: #1e3a8a;
-      }
-
-      /* Services */
+      /* services */
       .services {
         padding: 100px 0;
       }
@@ -556,20 +492,20 @@
       }
 
       /* .service-card::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        border-radius: 22px;
-        padding: 1px;
-        background: linear-gradient(
-          135deg,
-          transparent,
-          rgba(34, 197, 94, 0.6),
-          rgba(30, 58, 138, 0.6)
-        );
-        opacity: 0;
-        transition: opacity 0.4s ease;
-      } */
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    transparent,
+    rgba(34, 197, 94, 0.6),
+    rgba(30, 58, 138, 0.6)
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+} */
 
       .service-card:hover::before {
         opacity: 1;
@@ -649,55 +585,7 @@
         transform: scale(1.08);
       }
 
-      .service-content {
-        padding: 34px;
-      }
-
-      .service-content h4 {
-        font-size: 22px;
-        font-weight: 700;
-        color: #0f172a;
-        margin-bottom: 16px;
-      }
-
-      .service-content p {
-        font-size: 15.5px;
-        line-height: 1.8;
-        color: #334155;
-        margin-bottom: 14px;
-      }
-
-      @keyframes floatSoft {
-        0% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-6px);
-        }
-        100% {
-          transform: translateY(0);
-        }
-      }
-
-      .service-card:hover {
-        animation: floatSoft 3s ease-in-out infinite;
-      }
-
-      @media (max-width: 768px) {
-        .services {
-          padding: 80px 0;
-        }
-
-        .section-title {
-          font-size: 34px;
-        }
-
-        .service-content {
-          padding: 26px;
-        }
-      }
-
-      /* Section Styling */
+      /* Section Header */
       .section-header {
         max-width: 820px;
         margin: 0 auto;
@@ -749,6 +637,7 @@
         border-radius: 20px;
       }
 
+      /* Responsive */
       @media (max-width: 768px) {
         .section-title {
           font-size: 34px;
@@ -756,94 +645,6 @@
 
         .section-subtitle {
           font-size: 16px;
-        }
-      }
-
-      /* Healthcare Focus */
-      .focus {
-        padding: 120px 0;
-        background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
-      }
-
-      .focus-image-wrapper {
-        position: relative;
-        border-radius: 26px;
-        overflow: hidden;
-        box-shadow: 0 25px 70px rgba(15, 23, 42, 0.15);
-      }
-
-      .focus-img {
-        width: 100%;
-        border-radius: 26px;
-        transition: transform 0.6s ease;
-      }
-
-      .focus-image-wrapper:hover .focus-img {
-        transform: scale(1.05);
-      }
-
-      .focus-title {
-        font-size: 40px;
-        font-weight: 800;
-        line-height: 1.2;
-        margin-bottom: 18px;
-        color: #0f172a;
-      }
-
-      .focus-title span {
-        background: linear-gradient(90deg, #1e3a8a, #22c55e);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
-      .focus-description {
-        font-size: 17px;
-        line-height: 1.75;
-        color: #475569;
-        margin-bottom: 28px;
-      }
-
-      .focus-features {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 14px 20px;
-      }
-
-      .focus-feature {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 12px 16px;
-        background: #ffffff;
-        border-radius: 14px;
-        font-size: 15px;
-        font-weight: 600;
-        color: #0f172a;
-        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-        transition: all 0.3s ease;
-      }
-
-      .focus-feature span {
-        color: #22c55e;
-        font-size: 16px;
-      }
-
-      .focus-feature:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
-      }
-
-      @media (max-width: 768px) {
-        .focus-enhanced {
-          padding: 80px 0;
-        }
-
-        .focus-title {
-          font-size: 32px;
-        }
-
-        .focus-features {
-          grid-template-columns: 1fr;
         }
       }
 
@@ -946,87 +747,28 @@
         }
       }
 
-      /* Button styling */
-      .cta-section {
-        padding: 100px 0;
-        background: linear-gradient(135deg, #0b1f3a, #0e2a47);
-        position: relative;
-        overflow: hidden;
-      }
-
-      .cta-section::before {
-        content: "";
-        position: absolute;
-        width: 300px;
-        height: 300px;
-        background: radial-gradient(
-          circle,
-          rgba(34, 197, 94, 0.25),
-          transparent 70%
-        );
-        top: -100px;
-        right: -100px;
-      }
-
-      .cta-box {
-        max-width: 850px;
-        margin: auto;
-        padding: 60px 40px;
-        border-radius: 24px;
-        background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(12px);
-        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
-      }
-
-      .cta-box h2 {
-        font-size: 42px;
-        font-weight: 800;
-        color: #ffffff;
-      }
-
-      .cta-box h2 span {
-        color: #22c55e;
-      }
-
-      .cta-box p {
-        margin-top: 18px;
-        font-size: 18px;
-        color: #d1d5db;
-        line-height: 1.6;
-      }
-
-      .cta-actions {
-        margin-top: 35px;
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        flex-wrap: wrap;
-      }
-
-      .cta-section .btn-primary {
-        background: linear-gradient(135deg, #1e3a8a, #2563eb);
-        border: none;
-        padding: 14px 36px;
-        border-radius: 50px;
-        font-weight: 600;
-      }
-
-      .cta-section .btn-outline-light {
-        border: 1px solid rgba(255, 255, 255, 0.4);
-        color: #ffffff;
-        padding: 14px 36px;
-        border-radius: 50px;
-      }
-
-      .cta-section .btn-outline-light:hover {
-        background: rgba(255, 255, 255, 0.12);
-      }
-
       .hero-subheadline {
         margin-top: 18px;
         font-size: 22px;
         font-weight: 600;
         color: #e5e7eb;
+      }
+
+      /* FAQ  Page */
+      .accordion-button {
+        font-weight: 600;
+        color: #0f172a;
+      }
+
+      .accordion-button:not(.collapsed) {
+        background: rgba(34, 197, 94, 0.08);
+        color: #0f172a;
+      }
+
+      .accordion-body {
+        font-size: 15px;
+        line-height: 1.7;
+        color: #475569;
       }
     </style>
   </head>
@@ -1055,7 +797,7 @@
         </div>
 
         <div class="top-right">
-          <a href="Login.html" class="top-link">Sign In</a>
+          <a href="../../html/home/Login.html" class="top-link">Sign In</a>
         </div>
       </div>
     </div>
@@ -1064,9 +806,12 @@
     <header class="main-header">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <a
+            class="navbar-brand d-flex align-items-center"
+            href="../../html/index.html"
+          >
             <img
-              src="../assets/img/logos/RRLOGO.png"
+              src="../../assets/img/logos/RRLOGO.png"
               alt="Laundry Express"
               class="navbar-logo"
             />
@@ -1094,25 +839,33 @@
               </div>
 
               <div class="mobile-top-item">
-                <a href="Login.html" class="mobile-top-link">Sign In</a>
+                <a href="../../html/home/Login.html" class="mobile-top-link"
+                  >Sign In</a
+                >
               </div>
             </div>
 
             <ul class="navbar-nav ms-auto align-items-lg-center">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="../../html/index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
+                <a class="nav-link" href="../../html/home/about.html"
+                  >About Us</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="services.html">Services</a>
+                <a class="nav-link" href="../../html/home/services.html"
+                  >Services</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="faq.html">FAQ</a>
+                <a class="nav-link" href="../../html/home/faq.html">FAQ</a>
               </li>
               <li class="nav-item ms-lg-3">
-                <a class="btn btn-primary" href="contact.html">Contact Us</a>
+                <a class="btn btn-primary" href="../../html/home/contact.html"
+                  >Contact Us</a
+                >
               </li>
             </ul>
           </div>
@@ -1120,21 +873,19 @@
       </nav>
     </header>
 
-    <!-- Service page hero -->
-    <section class="hero hero-bg service-hero-bg">
+    <!-- Faq  Hero-->
+    <section class="hero hero-contact hero-bg faq-hero-bg">
       <div class="container">
         <div class="row align-items-center gy-5">
           <div class="col-lg-7" data-aos="fade-right">
             <h1>
-              Healthcare & Institutional<br />
-              <span>Laundry Services</span>
+              Frequently Asked<br />
+              <span>Questions</span>
             </h1>
 
             <p>
-              Technology-driven laundry services designed exclusively for
-              hospitals and institutions. We combine RFID automation,
-              healthcare-grade processing, and managed operations to eliminate
-              linen loss, improve hygiene compliance, and deliver complete
+              Clear answers to common questions about RFID-enabled healthcare
+              laundry management, hygiene compliance, and operational
               transparency.
             </p>
           </div>
@@ -1142,208 +893,224 @@
       </div>
     </section>
 
-    <!-- Services -->
+    <!-- Faq Question and Answer -->
     <section class="services">
       <div class="container">
         <div class="section-header text-center mb-5" data-aos="fade-up">
-          <span class="section-eyebrow">What We Deliver</span>
+          <span class="section-eyebrow">FAQs</span>
           <h2 class="section-title">
-            Comprehensive Laundry Services for<br />
-            <span>Healthcare & Institutions</span>
+            Everything You Need to Know<br />
+            <span>About Laundry Express</span>
           </h2>
-          <p class="section-subtitle">
-            Laundry Express manages the complete linen ecosystem — from RFID
-            tagging and hospital-grade processing to digital reporting and
-            managed operations — ensuring safety, accountability, and efficiency
-            at every stage.
-          </p>
         </div>
 
-        <div class="row g-4">
-          <div class="col-md-4" data-aos="zoom-in-up">
-            <div class="service-card service-card-large">
-              <span class="service-badge">Healthcare</span>
-
-              <div class="service-img">
-                <img
-                  src="../assets/img/services/HealthCareLaundry.png"
-                  alt="Healthcare Laundry Processing"
-                />
-              </div>
-
-              <div class="service-content">
-                <h4>Healthcare Laundry Processing</h4>
-
-                <p>
-                  Specialized hospital-grade laundry processing designed to meet
-                  strict infection control and hygiene compliance standards.
-                </p>
-
-                <p>
-                  Our workflows protect patient safety, staff safety, and fabric
-                  integrity through validated wash programs, segregation
-                  protocols, and hygienic finishing processes.
-                </p>
-
-                <p>
-                  Every batch is processed with traceability, audit readiness,
-                  and consistent quality control.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4" data-aos="zoom-in-up" data-aos-delay="150">
-            <div class="service-card service-card-large">
-              <span class="service-badge badge-green">RFID</span>
-
-              <div class="service-img">
-                <img
-                  src="../assets/img/services/ChatGPT Image Jan 16, 2026, 02_27_41 PM.png"
-                  alt="RFID Linen Management"
-                />
-              </div>
-
-              <div class="service-content">
-                <h4>RFID Linen Management System</h4>
-
-                <p>
-                  End-to-end RFID-based Linen Management System where every
-                  linen item is digitally tracked from issue to wash to return.
-                </p>
-
-                <p>
-                  Automated tracking eliminates manual registers, paper-based
-                  errors, and billing disputes while delivering real-time
-                  inventory visibility.
-                </p>
-
-                <p>
-                  Hospitals gain complete control, reduced shrinkage, and
-                  data-backed insights.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4" data-aos="zoom-in-up" data-aos-delay="300">
-            <div class="service-card service-card-large">
-              <span class="service-badge badge-blue">Operations</span>
-
-              <div class="service-img">
-                <img
-                  src="../assets/img/services/operationsAndSupport.png"
-                  alt="Operations and Support"
-                />
-              </div>
-
-              <div class="service-content">
-                <h4>Operations & Managed Support</h4>
-
-                <p>
-                  Dedicated operational teams ensure smooth, uninterrupted
-                  laundry services aligned with hospital workflows.
-                </p>
-
-                <p>
-                  SLA-driven performance monitoring, audits, reporting, and
-                  continuous optimization ensure accountability at every level.
-                </p>
-
-                <p>
-                  We operate as a long-term healthcare operations partner — not
-                  just a service vendor.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Technology used -->
-    <section class="focus focus-enhanced">
-      <div class="container">
-        <div class="row align-items-center gy-5">
-          <div class="col-lg-6" data-aos="fade-right">
-            <div class="focus-image-wrapper">
-              <img
-                src="../assets/img/hero/hero-img-5.jpg"
-                alt="RFID Technology Platform"
-                class="focus-img"
-              />
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-left">
-            <span class="section-eyebrow">Our Technology</span>
-            <h2 class="focus-title">
-              Smart RFID Technology That<br />
-              <span>Powers Every Service</span>
+        <div class="accordion accordion-flush" id="faqAccordion">
+          <div class="accordion-item" data-aos="fade-up">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq1"
+              >
+                What is RFID-based Linen Management?
+              </button>
             </h2>
-
-            <p class="focus-description">
-              Our RFID Linen Management System integrates hardware, software,
-              and workflows into a single digital platform — delivering
-              paperless operations and real-time visibility.
-            </p>
-
-            <div class="focus-features">
-              <div class="focus-feature">
-                <span>✔</span> RFID Tags on Every Linen
-              </div>
-              <div class="focus-feature">
-                <span>✔</span> Automated Tracking Touchpoints
-              </div>
-              <div class="focus-feature">
-                <span>✔</span> App-Based System – Zero Paperwork
-              </div>
-              <div class="focus-feature">
-                <span>✔</span> Real-Time Dashboards & Reports
+            <div
+              id="faq1"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                RFID-based Linen Management is a system where each linen item is
+                embedded with an RFID tag and digitally tracked throughout its
+                lifecycle — from issue to washing to return — providing
+                real-time visibility and complete accountability.
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Benefits -->
-    <section class="stats stats-enhanced">
-      <div class="container">
-        <div class="text-center mb-5" data-aos="fade-up">
-          <span class="section-eyebrow">Hospital Benefits</span>
-          <h2 class="section-title">
-            Measurable Impact for<br />
-            <span>Healthcare Operations</span>
-          </h2>
-        </div>
-
-        <div class="row g-4 text-center">
-          <div class="col-md-3" data-aos="fade-up">
-            <div class="stat-card">
-              <h2>30–40%</h2>
-              <p>Reduction in Linen Loss</p>
+          <div class="accordion-item" data-aos="fade-up">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq2"
+              >
+                How does RFID help reduce linen loss?
+              </button>
+            </h2>
+            <div
+              id="faq2"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                RFID enables automated tracking at every touchpoint, eliminating
+                manual counting errors and unidentified losses. Hospitals
+                typically achieve a 30–40% reduction in linen loss after
+                implementation.
+              </div>
             </div>
           </div>
 
-          <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
-            <div class="stat-card">
-              <h2>100%</h2>
-              <p>Elimination of Manual Registers</p>
+          <div class="accordion-item" data-aos="fade-up">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq3"
+              >
+                Is the system paperless?
+              </button>
+            </h2>
+            <div
+              id="faq3"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Yes. The entire system is app-based and paperless. All records,
+                movements, audits, and reports are digitally captured and stored
+                securely.
+              </div>
             </div>
           </div>
 
-          <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-            <div class="stat-card">
-              <h2>100%</h2>
-              <p>Real-Time Linen Visibility</p>
+          <div class="accordion-item" data-aos="fade-up">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq4"
+              >
+                How does Laundry Express ensure hygiene compliance?
+              </button>
+            </h2>
+            <div
+              id="faq4"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                We follow standardized hospital-grade wash cycles, controlled
+                chemical dosing, and quality inspections. RFID traceability
+                further strengthens infection control by ensuring process
+                compliance.
+              </div>
             </div>
           </div>
 
-          <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
-            <div class="stat-card">
-              <h2>✔</h2>
-              <p>Improved Infection Control</p>
+          <div class="accordion-item" data-aos="fade-up">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq5"
+              >
+                What chemicals are used in the laundry process?
+              </button>
+            </h2>
+            <div
+              id="faq5"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                We use Navin Polycon – Super Bright professional laundry
+                chemicals, selected for effective cleaning, fabric safety,
+                eco-compliance, and extended linen life.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-aos="fade-up">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq6"
+              >
+                Will RFID implementation disrupt hospital operations?
+              </button>
+            </h2>
+            <div
+              id="faq6"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                No. Laundry Express follows a phased onboarding approach with
+                dedicated training and support to ensure smooth adoption without
+                disrupting daily hospital workflows.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-aos="fade-up">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq7"
+              >
+                How does billing become more transparent?
+              </button>
+            </h2>
+            <div
+              id="faq7"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Billing is generated based on actual RFID-recorded linen
+                movement, eliminating disputes caused by manual counting
+                inaccuracies.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-aos="fade-up">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq8"
+              >
+                Can the system scale as hospital requirements grow?
+              </button>
+            </h2>
+            <div
+              id="faq8"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Yes. Our RFID Linen Management System is scalable and adaptable
+                to hospitals of all sizes and can grow with expanding
+                infrastructure.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-aos="fade-up">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq9"
+              >
+                Do you provide ongoing support after implementation?
+              </button>
+            </h2>
+            <div
+              id="faq9"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Yes. We provide continuous operational support, audits,
+                reporting, and system optimization to ensure long-term success.
+              </div>
             </div>
           </div>
         </div>
@@ -1369,11 +1136,11 @@
           <div class="col-lg-2 col-md-6">
             <h5 class="footer-title">Quick Links</h5>
             <ul class="footer-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="faq.html">FAQ</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../../html/home/about.html">About Us</a></li>
+              <li><a href="../../html/home/services.html">Services</a></li>
+              <li><a href="../../html/home/faq.html">FAQ</a></li>
+              <li><a href="../../html/home/contact.html">Contact</a></li>
             </ul>
           </div>
 
@@ -1410,10 +1177,11 @@
 
     <!-- Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/aos.js"></script>
-    <script src="../assets/js/loader.js"></script>
-    <script src="../assets/js/counter.js"></script>
-    <script src="../assets/js/main.js"></script>
+    <script src="../../assets/js/aos.js"></script>
+    <script src="../../assets/js/loader.js"></script>
+    <script src="../../assets/js/counter.js"></script>
+    <script src="../../assets/js/hero-slider.js"></script>
+    <script src="../../assets/js/main.js"></script>
 
     <script>
       AOS.init({

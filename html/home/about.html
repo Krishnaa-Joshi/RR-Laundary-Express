@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>Laundry Express | Healthcare Laundry Solutions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="../assets/img/logos/RRLOGO.png" />
+    <link rel="icon" href="../../assets/img/logos/RRLOGO.png" />
 
     <!-- Bootstrap CSS (CDN) -->
     <link
@@ -25,7 +25,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
+    
     <style>
       html {
         scroll-behavior: smooth;
@@ -369,27 +369,8 @@
         background-repeat: no-repeat;
       }
 
-      .home-hero-bg {
-        background-image: url("../assets/img/hero/5ef6194fd7bb2257438518a9e352ee77.jpg");
-      }
-
       .about-hero-bg {
-        background-image: url("../assets/img/hero/5ef6194fd7bb2257438518a9e352ee77.jpg");
-      }
-
-      .service-hero-bg {
-        min-height: 85vh;
-        background-image: url("../assets/img/hero/63f54924fc7ef34ed0b4462c04e3a768.jpg");
-      }
-
-      .faq-hero-bg {
-        min-height: 85vh;
-        background-image: url("../assests/img/hero/faq.jpg");
-      }
-
-      .contact-hero-bg {
-        min-height: 85vh;
-        background-image: url("../assests/img/hero/customer-support.jpg");
+        background-image: url("../../assets/img/hero/5ef6194fd7bb2257438518a9e352ee77.jpg");
       }
 
       .hero-bg .container {
@@ -867,101 +848,6 @@
         }
       }
 
-      /* Process Flow */
-      .process {
-        padding: 120px 0;
-        background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-      }
-
-      .process-row {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        gap: 60px;
-        margin-bottom: 80px;
-      }
-
-      .process-row.reverse {
-        direction: rtl;
-      }
-
-      .process-row.reverse > * {
-        direction: ltr;
-      }
-
-      .process-content {
-        position: relative;
-        background: #ffffff;
-        padding: 40px;
-        border-radius: 22px;
-        box-shadow: 0 20px 60px rgba(15, 23, 42, 0.1);
-      }
-
-      .process-content h4 {
-        font-size: 22px;
-        font-weight: 700;
-        margin-bottom: 12px;
-        color: #0f172a;
-      }
-
-      .process-content p {
-        font-size: 16px;
-        line-height: 1.75;
-        color: #475569;
-      }
-
-      .step-badge {
-        position: absolute;
-        top: -20px;
-        left: -20px;
-        width: 48px;
-        height: 48px;
-        background: linear-gradient(135deg, #1e3a8a, #22c55e);
-        color: #ffffff;
-        font-weight: 700;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 12px 30px rgba(30, 58, 138, 0.4);
-      }
-
-      .process-image img {
-        width: 100%;
-        border-radius: 22px;
-        box-shadow: 0 25px 70px rgba(15, 23, 42, 0.15);
-        transition: transform 0.6s ease;
-      }
-
-      .process-image img:hover {
-        transform: scale(1.04);
-      }
-
-      @media (max-width: 992px) {
-        .process-row {
-          grid-template-columns: 1fr;
-        }
-
-        .process-row.reverse {
-          direction: ltr;
-        }
-
-        .step-badge {
-          left: 20px;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .process-enhanced {
-          padding: 80px 0;
-        }
-
-        .process-row {
-          gap: 40px;
-          margin-bottom: 60px;
-        }
-      }
-
       /* Footer */
       .footer {
         background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
@@ -1143,6 +1029,141 @@
         font-weight: 600;
         color: #e5e7eb;
       }
+
+      /* About Page  Styling*/
+
+      /* Hero Section */
+      .about-eyebrow {
+        display: inline-block;
+        margin-bottom: 16px;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #22c55e;
+      }
+
+      .about-hero-content h1 {
+        font-size: 52px;
+        font-weight: 800;
+        line-height: 1.1;
+        color: #ffffff;
+        margin-bottom: 20px;
+      }
+
+      .about-hero-content h1 span {
+        color: #22c55e;
+      }
+
+      .about-lead {
+        font-size: 20px;
+        font-weight: 500;
+        color: #c7d2fe;
+        margin-bottom: 22px;
+        max-width: 680px;
+      }
+
+      .about-hero-content p {
+        font-size: 16.5px;
+        line-height: 1.7;
+        margin-bottom: 16px;
+        max-width: 720px;
+      }
+
+      .about-mission {
+        padding-left: 16px;
+        border-left: 3px solid #22c55e;
+        color: #f1f5f9;
+      }
+
+      @media (max-width: 768px) {
+        .about-hero-bg {
+          min-height: auto;
+          padding: 120px 0 80px;
+        }
+
+        .about-hero-content h1 {
+          font-size: 36px;
+        }
+
+        .about-lead {
+          font-size: 17px;
+        }
+
+        .about-hero-content p {
+          font-size: 15.5px;
+        }
+      }
+
+      .mission-card {
+        background: rgba(15, 23, 42, 0.75);
+        backdrop-filter: blur(14px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 18px;
+        padding: 28px 26px;
+        max-width: 360px;
+        color: #e5e7eb;
+
+        box-shadow:
+          0 30px 80px rgba(0, 0, 0, 0.45),
+          inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+
+        position: relative;
+      }
+
+      .mission-label {
+        display: inline-block;
+        margin-bottom: 14px;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        color: #22c55e;
+      }
+
+      .mission-card p {
+        font-size: 15.5px;
+        line-height: 1.6;
+        margin-bottom: 18px;
+        color: #f1f5f9;
+      }
+
+      .mission-points {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .mission-points li {
+        position: relative;
+        padding-left: 22px;
+        margin-bottom: 10px;
+        font-size: 14.5px;
+        color: #cbd5f5;
+      }
+
+      .mission-points li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #22c55e;
+        font-weight: 700;
+      }
+
+      @media (min-width: 992px) {
+        .mission-card {
+          transform: translateY(20px);
+        }
+      }
+
+      @media (max-width: 991px) {
+        .mission-card {
+          max-width: 100%;
+          margin-top: 20px;
+          transform: none;
+        }
+      }
     </style>
   </head>
 
@@ -1152,7 +1173,7 @@
       <div class="spinner"></div>
     </div>
 
-    <!-- Top Bar -->
+    <!-- Top Info Bar -->
     <div class="top-bar">
       <div class="container d-flex justify-content-between align-items-center">
         <div class="top-left d-flex align-items-center">
@@ -1170,7 +1191,7 @@
         </div>
 
         <div class="top-right">
-          <a href="../html/home/Login.html" class="top-link">Sign In</a>
+          <a href="../../html/home/Login.html" class="top-link">Sign In</a>
         </div>
       </div>
     </div>
@@ -1179,9 +1200,9 @@
     <header class="main-header">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <a class="navbar-brand d-flex align-items-center" href="../../html/index.html">
             <img
-              src="../assets/img/logos/RRLOGO.png"
+              src="../../assets/img/logos/RRLOGO.png"
               alt="Laundry Express"
               class="navbar-logo"
             />
@@ -1209,25 +1230,25 @@
               </div>
 
               <div class="mobile-top-item">
-                <a href="../html/home/Login.html" class="mobile-top-link">Sign In</a>
+                <a href="../../html/home/Login.html" class="mobile-top-link">Sign In</a>
               </div>
             </div>
 
             <ul class="navbar-nav ms-auto align-items-lg-center">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="../../html/index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./home/about.html">About Us</a>
+                <a class="nav-link" href="../home/about.html">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./home/services.html">Services</a>
+                <a class="nav-link" href="../home/services.html">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./home/faq.html">FAQ</a>
+                <a class="nav-link" href="../home/faq.html">FAQ</a>
               </li>
               <li class="nav-item ms-lg-3">
-                <a class="btn btn-primary" href="./home/contact.html">Contact Us</a>
+                <a class="btn btn-primary" href="../home/contact.html">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -1235,401 +1256,314 @@
       </nav>
     </header>
 
-    <!-- Hero -->
-    <section class="hero hero-bg home-hero-bg">
+    <!-- Hero Section -->
+    <section class="hero hero-bg about-hero-bg">
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10 text-center hero-text" data-aos="fade-up">
+        <div class="row align-items-center min-vh-75 gy-5">
+          <div class="col-lg-7 about-hero-content" data-aos="fade-right">
+            <span class="about-eyebrow">Who We Are</span>
+
             <h1>
-              RFID-Enabled Smart Healthcare &<br />
-              Institutional Laundry<br />
-              <span>Management Solutions</span>
+              About <br />
+              <span>RR Laundry Express</span>
             </h1>
 
-            <h3 class="hero-subheadline">
-              Your Laundry. Our Priority. Zero Loss. Total Transparency.
-            </h3>
-
-            <p>
-              Laundry Express delivers technology-driven, hospital-grade laundry
-              solutions powered by RFID-enabled Linen Management Systems. We
-              help hospitals eliminate linen loss, reduce costs, improve hygiene
-              compliance, and gain complete visibility across the linen
-              lifecycle.
+            <p class="about-lead">
+              RR Laundry Express is a B2B laundry solutions specialist
+              exclusively focused on healthcare and institutional laundry
+              operations.
             </p>
 
-            <div class="hero-actions justify-content-center">
-              <a
-                href="contact.html"
-                class="btn btn-primary d-flex align-items-center"
-                >Request a Demo</a
+            <p>
+              We combine <strong>RFID technology</strong>, automated workflows,
+              and healthcare-grade infrastructure to solve the most critical
+              challenges hospitals face in linen management.
+            </p>
+
+            <p>
+              We partner with hospitals to build
+              <strong
+                >smart, paperless, and fully traceable linen ecosystems</strong
               >
-              <a href="services.html" class="btn btn-secondary-hero">
-                Explore Our RFID Solutions
-              </a>
+              that deliver measurable operational impact.
+            </p>
+          </div>
+
+          <div
+            class="col-lg-5 d-flex justify-content-lg-end"
+            data-aos="fade-left"
+          >
+            <div class="mission-card">
+              <span class="mission-label">Our Mission</span>
+
+              <p>
+                Reduce linen loss, eliminate paperwork, improve infection
+                control, and optimize operational costs through automation.
+              </p>
+
+              <ul class="mission-points">
+                <li>Zero Linen Loss</li>
+                <li>Paperless Operations</li>
+                <li>Infection Control Compliance</li>
+                <li>Operational Cost Optimization</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Stats -->
-    <section class="stats stats-enhanced" id="stats">
+    <!-- Challenges In Hospital Section -->
+    <section class="services">
+      <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+          <span class="section-eyebrow">The Reality</span>
+          <h2 class="section-title">
+            Challenges in Hospital<br />
+            <span>Linen Management</span>
+          </h2>
+        </div>
+
+        <div class="row g-4 mt-4">
+          <div class="col-md-4" data-aos="zoom-in">
+            <div class="service-card">
+              <h4>High Linen Loss</h4>
+              <p>
+                Hospitals face continuous linen shrinkage with no clear
+                explanation, leading to repeated procurement and rising costs.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="service-card">
+              <h4>Manual Registers & Paperwork</h4>
+              <p>
+                Paper-based tracking leads to human errors, missing entries, and
+                operational inefficiencies.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="service-card">
+              <h4>No Real-Time Visibility</h4>
+              <p>
+                Hospitals lack real-time insight into linen movement across
+                departments, laundry, and storage.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="zoom-in">
+            <div class="service-card">
+              <h4>Billing Disputes</h4>
+              <p>
+                Inaccurate counting results in disputes between hospitals and
+                laundry vendors.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="service-card">
+              <h4>Infection Control Risks</h4>
+              <p>
+                Poor traceability increases infection risks and non-compliance
+                with hospital hygiene standards.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="service-card">
+              <h4>No Accountability</h4>
+              <p>
+                Without digital tracking, responsibility and ownership are
+                unclear.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section class="process process-enhanced">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="mb-5">
+              <span class="section-eyebrow" data-aos="fade-up"
+                >Our Core Solution</span
+              >
+              <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">
+                RFID-Based Linen<br />
+                <span>Management System (LMS)</span>
+              </h2>
+              <p
+                class="section-subtitle"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                A fully automated, RFID-powered platform that digitally tracks
+                every linen item from issue to wash to return.
+              </p>
+            </div>
+
+            <ul class="focus-features">
+              <li class="focus-feature">
+                <span class="check">✔</span>
+                RFID tags embedded in every linen item
+              </li>
+
+              <li class="focus-feature">
+                <span class="check">✔</span>
+                Automated tracking at every touchpoint
+              </li>
+
+              <li class="focus-feature">
+                <span class="check">✔</span>
+                App-based system – zero paperwork
+              </li>
+
+              <li class="focus-feature">
+                <span class="check">✔</span>
+                Real-time inventory visibility
+              </li>
+
+              <li class="focus-feature">
+                <span class="check">✔</span>
+                Accurate billing & usage analytics
+              </li>
+
+              <li class="focus-feature highlight">
+                <span class="check">✔</span>
+                Complete linen lifecycle traceability & audit-ready reports
+              </li>
+            </ul>
+
+            <p class="focus-description mt-4">
+              This system eliminates manual errors, reduces linen losses, and
+              ensures complete transparency between hospitals and laundry
+              operations.
+            </p>
+          </div>
+
+          <div class="col-lg-6 text-center" data-aos="fade-left">
+            <div class="focus-image-wrapper">
+              <img
+                src="../../assets/img/hero/hero-img-7.jpg"
+                alt="RFID Linen Management Dashboard"
+                class="focus-image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits for Hospital Section -->
+    <section class="stats stats-enhanced">
       <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
-          <span class="section-eyebrow">Trusted Impact</span>
+          <span class="section-eyebrow">Hospital Impact</span>
           <h2 class="section-title">
-            Proven Results Across<br />
-            <span>Healthcare Operations</span>
+            Key Benefits for<br />
+            <span>Hospitals</span>
           </h2>
         </div>
 
         <div class="row g-4 text-center">
-          <div class="col-md-3" data-aos="fade-up">
+          <div class="col-md-4" data-aos="zoom-in">
             <div class="stat-card">
-              <div class="stat-icon">🏥</div>
-              <h2 class="counter" data-target="50">0</h2>
-              <p>Hospitals Served</p>
+              <h2>30–40%</h2>
+              <p>Reduction in Linen Loss</p>
             </div>
           </div>
 
-          <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
             <div class="stat-card">
-              <div class="stat-icon">📉</div>
-              <h2 class="counter" data-target="40">0</h2>
-              <p>Linen Loss Reduced |(%)</p>
+              <h2>100%</h2>
+              <p>Elimination of Manual Paperwork</p>
             </div>
           </div>
 
-          <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
             <div class="stat-card">
-              <div class="stat-icon">🧼</div>
-              <h2 class="counter" data-target="100">0</h2>
-              <p>Hygiene Compliance (%)</p>
+              <h2>✔</h2>
+              <p>Improved Accountability & Transparency</p>
             </div>
           </div>
 
-          <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-md-4" data-aos="zoom-in">
             <div class="stat-card">
-              <div class="stat-icon">⏱️</div>
-              <h2 class="counter" data-target="24">0</h2>
-              <p>Operational Support (hrs)</p>
+              <h2>✔</h2>
+              <p>Stronger Infection Control Compliance</p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="stat-card">
+              <h2>✔</h2>
+              <p>Optimized Linen Lifecycle</p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="stat-card">
+              <h2>₹</h2>
+              <p>Reduced Linen Procurement Costs</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Services -->
-    <section class="services" id="services">
-      <div class="container">
-        <div class="section-header text-center mb-5" data-aos="fade-up">
-          <span class="section-eyebrow">What We Deliver</span>
-
-          <h2 class="section-title">
-            Intelligent Laundry Services for<br />
-            <span>Healthcare & Institutions</span>
-          </h2>
-
-          <p class="section-subtitle">
-            We combine healthcare-grade processes, smart technology, and
-            operational expertise to deliver safe, efficient, and sustainable
-            laundry solutions trusted by leading hospitals and institutions.
-          </p>
-        </div>
-
-        <div class="row g-4">
-          <div class="col-md-4" data-aos="zoom-in-up">
-            <div class="service-card service-card-large">
-              <span class="service-badge">Healthcare</span>
-
-              <div class="service-img">
-                <img
-                  src="../assets/img/services/HealthCareLaundry.png"
-                  alt=""
-                />
-              </div>
-
-              <div class="service-content">
-                <h4>Healthcare Laundry Processing</h4>
-
-                <p>
-                  Specialized hospital-grade laundry processing that follows
-                  strict infection control protocols, ensuring patient safety
-                  and clinical hygiene.
-                </p>
-
-                <p>
-                  Controlled wash formulas, segregation workflows, and hygienic
-                  finishing processes ensure consistent quality across every
-                  cycle while protecting fabric integrity.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4" data-aos="zoom-in-up" data-aos-delay="150">
-            <div class="service-card service-card-large">
-              <span class="service-badge badge-green">RFID</span>
-
-              <div class="service-img">
-                <img
-                  src="../assets/img/services/ChatGPT Image Jan 16, 2026, 02_27_41 PM.png"
-                  alt=""
-                />
-              </div>
-
-              <div class="service-content">
-                <h4>RFID Linen Management</h4>
-
-                <p>
-                  End-to-end RFID-based tracking delivers real-time visibility
-                  of linen movement, usage patterns, and lifecycle status.
-                </p>
-
-                <p>
-                  Hospitals reduce linen loss, improve accountability, and gain
-                  data-backed insights to optimize inventory and costs.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4" data-aos="zoom-in-up" data-aos-delay="300">
-            <div class="service-card service-card-large">
-              <span class="service-badge badge-blue">Operations</span>
-
-              <div class="service-img">
-                <img
-                  src="../assets/img/services/operationsAndSupport.png"
-                  alt=""
-                />
-              </div>
-
-              <div class="service-content">
-                <h4>Operations & Support</h4>
-
-                <p>
-                  Dedicated operational teams, performance audits, and
-                  SLA-driven workflows ensure smooth, uninterrupted laundry
-                  operations.
-                </p>
-
-                <p>
-                  Continuous optimization, reporting dashboards, and proactive
-                  support make us a long-term healthcare operations partner.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Healthcare Focus -->
+    <!-- Quality Check -->
     <section class="focus focus-enhanced">
       <div class="container">
         <div class="row align-items-center gy-5">
           <div class="col-lg-6" data-aos="fade-right">
-            <div class="focus-image-wrapper">
-              <img
-                src="../assets/img/hero/hero-img-5.jpg"
-                alt="Why Hospitals Choose Laundry Express"
-                class="focus-img"
-              />
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-left">
-            <span class="section-eyebrow">Why Laundry Express</span>
-
             <h2 class="focus-title">
-              Why Hospitals Choose<br />
-              <span>Laundry Express</span>
+              Chemical Usage &<br />
+              <span>Quality Control</span>
             </h2>
 
             <p class="focus-description">
-              Laundry Express is more than a laundry service provider. We are a
-              technology-driven healthcare operations partner, helping hospitals
-              gain complete control, visibility, and accountability across their
-              linen lifecycle.
+              We use <strong>Navin Polycon – Super Bright</strong> professional
+              laundry chemicals, selected to ensure effective cleaning while
+              maintaining fabric safety and longer linen life.
             </p>
 
             <div class="focus-features">
               <div class="focus-feature">
-                <span>✔</span> End-to-End RFID Linen Management Implementation
+                <span>✔</span> Effective hospital-grade cleaning
               </div>
-
               <div class="focus-feature">
-                <span>✔</span> Deep Healthcare & Hospital Laundry Domain
-                Expertise
+                <span>✔</span> Controlled chemical dosing
               </div>
-
               <div class="focus-feature">
-                <span>✔</span> Scalable, Secure & Enterprise-Ready Technology
-                Platform
+                <span>✔</span> Fabric safety & extended linen life
               </div>
-
               <div class="focus-feature">
-                <span>✔</span> Dedicated Onboarding, Training & 24×7 Operational
-                Support
+                <span>✔</span> Eco-friendly, compliant operations
               </div>
-
               <div class="focus-feature">
-                <span>✔</span> Customizable Workflows Aligned to Hospital
-                Operations
-              </div>
-
-              <div class="focus-feature">
-                <span>✔</span> Data Security, Audit Trails & Compliance-Ready
-                Reporting
+                <span>✔</span> Standardized hospital wash cycles
               </div>
             </div>
+          </div>
 
-            <p class="focus-description mt-4">
-              <strong>
-                We don’t just wash linen — we transform hospital laundry
-                operations with technology, transparency, and trust.
-              </strong>
-            </p>
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="focus-image-wrapper">
+              <img
+                src="../../assets/img/healthcare/quality_check.png"
+                alt="Laundry Quality Control"
+                class="focus-img"
+              />
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Process Flow -->
-    <section class="process process-enhanced">
-      <div class="container">
-        <div class="text-center mb-5">
-          <span class="section-eyebrow" data-aos="fade-up">LMS Workflow</span>
-          <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">
-            How Our RFID Linen Management<br />
-            <span>System Works</span>
-          </h2>
-          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
-            A fully digital, RFID-enabled linen lifecycle management system
-            designed to eliminate losses, improve hygiene compliance, and
-            deliver complete operational transparency.
-          </p>
-        </div>
-
-        <div class="process-row" data-aos="fade-up">
-          <div class="process-content">
-            <div class="step-badge">1</div>
-            <h4>Linen Tagging & Onboarding</h4>
-            <p>
-              New linen is either pre-tagged by the manufacturer or tagged at
-              the hospital using RFID technology. Each linen piece is digitally
-              defined and added to the system using RFID tabletop readers,
-              creating a unique identity for lifecycle tracking.
-            </p>
-          </div>
-          <div class="process-image">
-            <img
-              src="../assets/img/healthcare/collection.png"
-              alt="RFID Linen Tagging"
-            />
-          </div>
-        </div>
-
-        <div class="process-row reverse" data-aos="fade-up">
-          <div class="process-content">
-            <div class="step-badge">2</div>
-            <h4>Issue & Movement Tracking</h4>
-            <p>
-              Linen issued to departments is automatically recorded using fixed
-              or handheld RFID readers. Every movement — issue, return, or
-              transfer — is synced in real time with the hospital’s linen
-              database.
-            </p>
-          </div>
-          <div class="process-image">
-            <img
-              src="../assets/img/healthcare/rfidTracking.png"
-              alt="RFID Linen Movement Tracking"
-            />
-          </div>
-        </div>
-
-        <div class="process-row" data-aos="fade-up">
-          <div class="process-content">
-            <div class="step-badge">3</div>
-            <h4>Soiled Linen Collection</h4>
-            <p>
-              Soiled linen received at the laundry facility is automatically
-              scanned and logged into the system. Manual counting is completely
-              eliminated, ensuring faster intake, accuracy, and zero
-              reconciliation errors.
-            </p>
-          </div>
-          <div class="process-image">
-            <img
-              src="../assets/img/healthcare/soiledLinen.png"
-              alt="Soiled Linen Collection"
-            />
-          </div>
-        </div>
-
-        <div class="process-row reverse" data-aos="fade-up">
-          <div class="process-content">
-            <div class="step-badge">4</div>
-            <h4>Washing & Processing</h4>
-            <p>
-              Hospital-grade washing, drying, and finishing are performed using
-              validated processes. Each wash cycle is digitally tracked to
-              ensure compliance with infection control protocols and quality
-              benchmarks.
-            </p>
-          </div>
-          <div class="process-image">
-            <img
-              src="../assets/img/healthcare/processing.png"
-              alt="Laundry Washing & Processing"
-            />
-          </div>
-        </div>
-
-        <div class="process-row" data-aos="fade-up">
-          <div class="process-content">
-            <div class="step-badge">5</div>
-            <h4>Quality Check</h4>
-            <p>
-              Every processed linen item undergoes inspection before dispatch.
-              Quality checks ensure hygiene standards, fabric safety, and
-              service consistency across every batch.
-            </p>
-          </div>
-          <div class="process-image">
-            <img
-              src="../assets/img/healthcare/quality_check.png"
-              alt="Laundry Quality Check"
-            />
-          </div>
-        </div>
-
-        <div class="process-row reverse" data-aos="fade-up">
-          <div class="process-content">
-            <div class="step-badge">6</div>
-            <h4>Delivery & Reporting</h4>
-            <p>
-              Clean linen is delivered back to the hospital along with complete
-              digital records, audit logs, consumption analytics, and
-              performance reports—ensuring total accountability and visibility.
-            </p>
-          </div>
-          <div class="process-image">
-            <img
-              src="../assets/img/healthcare/delivery.png"
-              alt="Laundry Delivery & Reports"
-            />
-          </div>
-        </div>
-
-        <div class="text-center mt-5" data-aos="fade-up">
-          <p class="section-subtitle">
-            👉 <strong>Result:</strong> Faster turnaround, zero manual errors,
-            and complete accountability across the entire linen lifecycle.
-          </p>
         </div>
       </div>
     </section>
@@ -1653,11 +1587,11 @@
           <div class="col-lg-2 col-md-6">
             <h5 class="footer-title">Quick Links</h5>
             <ul class="footer-links">
-              <li><a href="../html/index.html">Home</a></li>
-              <li><a href="../html/home/about.html">About Us</a></li>
-              <li><a href="../html/home/services.html">Services</a></li>
-              <li><a href="../html/home/faq.html">FAQ</a></li>
-              <li><a href="../html/home/contact.html">Contact</a></li>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../home/about.html">About Us</a></li>
+              <li><a href="../home/services.html">Services</a></li>
+              <li><a href="../home/faq.html">FAQ</a></li>
+              <li><a href="../home/contact.html">Contact</a></li>
             </ul>
           </div>
 
@@ -1692,13 +1626,13 @@
       </div>
     </footer>
 
-    <!-- Javascript -->
+    <!-- JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/aos.js"></script>
-    <script src="../assets/js/loader.js"></script>
-    <script src="../assets/js/counter.js"></script>
-    <script src="../assets/js/hero-slider.js"></script>
-    <script src="../assets/js/main.js"></script>
+    <script src="../../assets/js/aos.js"></script>
+    <script src="../../assets/js/loader.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/counter.js"></script>
+    <script src="../../assets/js/hero-slider.js"></script>
 
     <script>
       AOS.init({

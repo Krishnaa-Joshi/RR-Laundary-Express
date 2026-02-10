@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
         console.log("User authenticated (mock)");
 
-        window.location.href = "clientDashborad.html";
+        window.location.href = "../../html/client/clientDashborad.html";
 
       }, 1500);
     }, 2000);
